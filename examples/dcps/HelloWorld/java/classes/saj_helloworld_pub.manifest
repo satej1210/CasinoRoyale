@@ -1,0 +1,2 @@
+Class-Path: saj_helloworld_types.jar ..\..\..\..\..\jar\dcpssaj.jar 
+Main-Class: HelloWorldDataPublisher

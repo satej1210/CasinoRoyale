@@ -1,0 +1,279 @@
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:57 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299137.840900459
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:57 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299137.952240364
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:58 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299138.052244042
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:58 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299138.152303743
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:58 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299138.352280307
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:58 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299138.752286893
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:58 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299138.952389615
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:59 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299139.052386878
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:59 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299139.057103464
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:59 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299139.152405952
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:59 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299139.157128525
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:59 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299139.257149309
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:59 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299139.352426992
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:59 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299139.457128867
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:59 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299139.752921103
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:59 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299139.840649427
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:59 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299139.857522051
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:38:59 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299139.953477137
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:39:00 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299140.053468413
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:39:00 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299140.153445149
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:39:00 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299140.353476025
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:39:00 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299140.657781123
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:39:00 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299140.753473630
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:39:00 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299140.954050192
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:39:01 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299141.053991433
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:39:01 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299141.054224504
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:39:01 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299141.154003664
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:39:01 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299141.154209792
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:39:01 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299141.253459518
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:39:01 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299141.253615611
+========================================================================================
+Report      : ERROR
+Date        : Fri Nov 04 17:39:01 Central Daylight Time 2016
+Description : UDP recvmsg sock 2596: ret -1 errno 10054
+
+Node        : Asus-PC
+Process     : java.exe <12536>
+Thread      : recv 11668
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/ddsi_socket.c/45/0/1478299141.254311403
