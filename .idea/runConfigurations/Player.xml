@@ -17,6 +17,9 @@
       <env name="PATH" value=".\bin;.\lib;" />
       <env name="OSPL_URI" value="file://.\etc\config\ospl.xml" />
     </envs>
-    <method />
+    <method>
+      <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_idlpp" />
+      <option name="Make" enabled="true" />
+    </method>
   </configuration>
 </component>

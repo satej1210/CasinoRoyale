@@ -1,28 +1,32 @@
 /**
- * Created by satejmhatre on 10/26/16.
+ * Created by Satej on 11/14/2016.
  */
-import CR.*;
-import DDS.*;
 
+import CR.*;
+import DDS.DataWriter;
+import DDS.HANDLE_NIL;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Dealer {
+    public final static int DECKS = 6;
+    private bjDealer dealer;
+    private ArrayList<CR.card> cards;
 
-    public static int NUMBER_OF_DECKS = 6;
-
-    private  bjDealer dealer;
-    Dealer(){
+    private Dealer() {
         dealer = new bjDealer();
         dealer.uuid = UUIDGen.generate_UUID();
-        dealer.seqno = 0;
+        dealer.cards = new card[21];
         dealer.action = bjd_action.waiting;
-        dealer.cards = new CR.card[Dealer.NUMBER_OF_DECKS*52];
-
+        dealer.seqno = 0;
+        cards = new ArrayList<>();
+        CardFunctions.GenerateDeck(cards);
     }
 
-    public static void Subscribe(){
+    public static void Publish(String m, Dealer p) {
         DDSEntityManager mgr = new DDSEntityManager();
-        String partitionName = "HelloWorld example";
+        String partitionName = "Dealer_init";
 
         // create Domain Participant
         mgr.createParticipant(partitionName);
@@ -32,123 +36,65 @@ public class Dealer {
         mgr.registerType(msgTS);
 
         // create Topic
-        mgr.createTopic("HelloWorldData_Msg");
+        mgr.createTopic("Dealer_init");
 
-        // create Subscriber
-        mgr.createSubscriber();
+        // create Publisher
+        mgr.createPublisher();
 
-        // create DataReader
-        mgr.createReader();
+        // create DataWriter
+        mgr.createWriter();
 
-        // Read Events
+        // Publish Events
 
-        DataReader dreader = mgr.getReader();
-        bjDealerDataReader HelloWorldReader = bjDealerDataReaderHelper.narrow(dreader);
+        DataWriter dwriter = mgr.getWriter();
+        bjDealerDataWriter HelloWorldWriter = bjDealerDataWriterHelper.narrow(dwriter);
+        bjDealer msgInstance = new bjDealer();
+        msgInstance.uuid = p.dealer.uuid;
+        msgInstance.seqno = p.dealer.seqno;
+        msgInstance.action = p.dealer.action;
+        msgInstance.active_players = p.dealer.active_players;
 
-        bjDealerSeqHolder msgSeq = new bjDealerSeqHolder();
-        SampleInfoSeqHolder infoSeq = new SampleInfoSeqHolder();
-
-        System.out.println ("=== [Subscriber] Ready ...");
-        Runnable backGroundRunnable = () -> {
-
-            boolean terminate = false;
-            int count = 0;
-            while (!terminate) { // We dont want the example to run indefinitely
-                HelloWorldReader.take(msgSeq, infoSeq, LENGTH_UNLIMITED.value,
-                        ANY_SAMPLE_STATE.value, ANY_VIEW_STATE.value,
-                        ANY_INSTANCE_STATE.value);
-                for (int i = 0; i < msgSeq.value.length; i++) {
-                    if (msgSeq.value[i].getClass() == bjDealer.class){//.message.equals("Hello World")) {
-                        System.out.println("=== [Subscriber] message received :");
-                        System.out.println("    uuid  : "
-                                + msgSeq.value[i].uuid);
-                        System.out.println("    Message : \""
-                                + msgSeq.value[i].seqno + "\"");
-                        terminate = true;
-                    }
-                }
-                try
-                {
-                    Thread.sleep(200);
-                }
-                catch(InterruptedException ie)
-                {
-                    // nothing to do
-                }
-                ++count;
-
-            }
-            HelloWorldReader.return_loan(msgSeq, infoSeq);
-
-            // clean up
-            mgr.getSubscriber().delete_datareader(HelloWorldReader);
-            mgr.deleteSubscriber();
-            mgr.deleteTopic();
-            mgr.deleteParticipant();
-        };
-        Thread sampleThread = new Thread(backGroundRunnable);
-        sampleThread.start();
-    }
-
-    public static void Publish(String partitionName, Dealer d){
-
-            DDSEntityManager mgr = new DDSEntityManager();
-            // create Domain Participant
-            mgr.createParticipant(partitionName);
-            // create Type
-            bjDealerTypeSupport msgTS = new bjDealerTypeSupport();
-            mgr.registerType(msgTS);
-            // create Topic
-            mgr.createTopic(partitionName);
-            // create Publisher
-            mgr.createPublisher();
-            // create DataWriter
-            mgr.createWriter();
-            // Publish Events
-            DataWriter dwriter = mgr.getWriter();
-            bjDealerDataWriter dealerWriter = bjDealerDataWriterHelper.narrow(dwriter);
-//            bjPlayer msgInstance = new bjPlayer();
-            System.out.println("=== [Dealer Publisher] writing a message containing :");
-            System.out.println("    uuid  : " + d.dealer.uuid);
-            System.out.println("    seqno : \"" + d.dealer.seqno + "\"");
-            dealerWriter.register_instance(d.dealer);
-            int status = dealerWriter.write(d.dealer, HANDLE_NIL.value);
-            ErrorHandler.checkStatus(status, "MsgDataWriter.write");
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            // clean up
-            mgr.getPublisher().delete_datawriter(dealerWriter);
-            mgr.deletePublisher();
-            mgr.deleteTopic();
-            mgr.deleteParticipant();
+        msgInstance.target_uuid = p.dealer.target_uuid;
+        System.out.println("==1de= [Publisher] writing a message containing :");
+        System.out.println("    userID  : " + msgInstance.uuid);
+        System.out.println("    Message : \"" + msgInstance.seqno + "\"");
+        HelloWorldWriter.register_instance(msgInstance);
+        int status = HelloWorldWriter.write(msgInstance, HANDLE_NIL.value);
+        ErrorHandler.checkStatus(status, "MsgDataWriter.write");
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        // clean up
+        mgr.getPublisher().delete_datawriter(HelloWorldWriter);
+        mgr.deletePublisher();
+        mgr.deleteTopic();
+        mgr.deleteParticipant();
 
 
     }
 
-    public static void initialize(){
-
-    }
     public static void main(String args[]){
-        System.out.println(MAX_PLAYERS.value);
-        Scanner reader = new Scanner(System.in);  // Reading from System.in
-        //Subscribe();
         Dealer d = new Dealer();
         Publish("Dealer_init", d);
         d.dealer.action = bjd_action.shuffling;
-        CardFunctions.GenerateDeck(d.dealer.cards);
-        CardFunctions.ShuffleCards(d.dealer.cards);
-        CardFunctions.PrintDeck(d.dealer.cards);
+
+        CardFunctions.ShuffleCards(d.cards);
+        CardFunctions.PrintDeck(d.cards);
         System.out.println(d.dealer.cards.length);
         CardAndDeck cd;
-        cd = CardFunctions.PickCard(d.dealer.cards);
+        cd = CardFunctions.PickCard(d.cards);
         d.dealer.cards = cd.c.clone();
         System.out.println(d.dealer.cards.length);
         System.out.println(cd.card);
-        Publish("Dealer", d);
+        System.out.println(MAX_PLAYERS.value);
+        Scanner reader = new Scanner(System.in);
+
+//        System.out.println("Enter a number: ");
+//        int n = reader.nextInt();
+//        System.out.println("number: " + n);
+        //Publish("Player", p);
 
     }
-
 }
