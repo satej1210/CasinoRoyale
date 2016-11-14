@@ -1,8 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="AllAtOnce" type="Multirun" factoryName="Multirun" separateTabs="true" startOneByOne="false" markFailedProcess="true" hideSuccessProcess="false" delayTime="0">
-    <runConfiguration name="GameManager" type="Application" />
-    <runConfiguration name="Dealer" type="Application" />
-    <runConfiguration name="Player" type="Application" />
-    <method />
-  </configuration>
-</component>
