@@ -12,6 +12,9 @@ public class GameManager {
     public static boolean dealerJoined = false;
     public static boolean playerRunning = true;
     public static boolean dealerRunning = true;
+    private static final String dealerInit = "Dealer_init";
+    private static final String playerInit = "Player_init";
+
 
     public static ArrayList<bjPlayer> players = null;
     public static ArrayList<bjDealer> dealers = null;
@@ -21,17 +24,16 @@ public class GameManager {
     }
     public static void initializePlayer(){
         DDSEntityManager mgr = new DDSEntityManager();
-        String partitionName = "Player";
 
         // create Domain Participant
-        mgr.createParticipant(partitionName);
+        mgr.createParticipant("Player_init");
 
         // create Type
         bjPlayerTypeSupport msgTS = new bjPlayerTypeSupport();
         mgr.registerType(msgTS);
 
         // create Topic
-        mgr.createTopic("Player");
+        mgr.createTopic("Player_init");
 
         // create Subscriber
         mgr.createSubscriber();
@@ -98,24 +100,23 @@ public class GameManager {
             mgr.deleteSubscriber();
             mgr.deleteTopic();
             mgr.deleteParticipant();
-            SubscribeToPlayer();
+
         };
         Thread sampleThread = new Thread(backGroundRunnable);
         sampleThread.start();
     }
     public static void initializeDealer(){
         DDSEntityManager mgr = new DDSEntityManager();
-        String partitionName = "Dealer";
 
         // create Domain Participant
-        mgr.createParticipant(partitionName);
+        mgr.createParticipant("Dealer_init");
 
         // create Type
         bjDealerTypeSupport msgTS = new bjDealerTypeSupport();
         mgr.registerType(msgTS);
 
         // create Topic
-        mgr.createTopic("Dealer");
+        mgr.createTopic("Dealer_init");
 
         // create Subscriber
         mgr.createSubscriber();
@@ -154,8 +155,8 @@ public class GameManager {
                             }
                         }
                         if(!exists){
-                            System.out.println("=== [Subscriber] message received from new Player:");
-                            System.out.println("A Player with UUID " + bjDealerSeq.value[i].uuid + " has joined!");
+                            System.out.println("=== [Subscriber] message received from new Dealer:");
+                            System.out.println("A Dealer with UUID " + bjDealerSeq.value[i].uuid + " has joined!");
                         }
                         System.out.println("=== [Subscriber] message received from new Dealer :");
                         System.out.println("Dealer is now waiting...");
@@ -185,7 +186,7 @@ public class GameManager {
             mgr.deleteSubscriber();
             mgr.deleteTopic();
             mgr.deleteParticipant();
-            SubscribeToDealer();
+
         };
         Thread sampleThread = new Thread(backGroundRunnable);
         sampleThread.start();
@@ -257,7 +258,7 @@ public class GameManager {
             mgr.deleteSubscriber();
             mgr.deleteTopic();
             mgr.deleteParticipant();
-            playerRunning = false;
+
         };
         Thread sampleThread = new Thread(backGroundRunnable);
         sampleThread.start();
@@ -327,7 +328,7 @@ public class GameManager {
             mgr.deleteSubscriber();
             mgr.deleteTopic();
             mgr.deleteParticipant();
-            dealerRunning = false;
+
         };
         Thread sampleThread = new Thread(backGroundRunnable);
         sampleThread.start();
@@ -342,10 +343,7 @@ public class GameManager {
             boolean a = true;
             while(a) {
                 if (playerJoined && dealerJoined) {
-
-
                     a = false;
-
                 }
             }
         };

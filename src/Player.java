@@ -16,46 +16,41 @@ public class Player  {
         player.credits = 100;
         player.action = bjp_action.joining;
         player.seqno = 0;
+        Publish("Player_init", this);
     }
-    public static void Publish(String message, Player p){
-        Runnable b = ()->{
-            DDSEntityManager mgr = new DDSEntityManager();
-            String partitionName = "Player";
-            // create Domain Participant
-            mgr.createParticipant(partitionName);
-            // create Type
-            bjPlayerTypeSupport msgTS = new bjPlayerTypeSupport();
-            mgr.registerType(msgTS);
-            // create Topic
-            mgr.createTopic("Player");
-            // create Publisher
-            mgr.createPublisher();
-            // create DataWriter
-            mgr.createWriter();
-            // Publish Events
-            DataWriter dwriter = mgr.getWriter();
-            bjPlayerDataWriter playerWriter = bjPlayerDataWriterHelper.narrow(dwriter);
+    public static void Publish(String partitionName, Player p){
+        DDSEntityManager mgr = new DDSEntityManager();
+        // create Domain Participant
+        mgr.createParticipant(partitionName);
+        // create Type
+        bjPlayerTypeSupport msgTS = new bjPlayerTypeSupport();
+        mgr.registerType(msgTS);
+        // create Topic
+        mgr.createTopic(partitionName);
+        // create Publisher
+        mgr.createPublisher();
+        // create DataWriter
+        mgr.createWriter();
+        // Publish Events
+        DataWriter dwriter = mgr.getWriter();
+        bjPlayerDataWriter playerWriter = bjPlayerDataWriterHelper.narrow(dwriter);
 //            bjPlayer msgInstance = new bjPlayer();
-            System.out.println("=== [Publisher] writing a message containing :");
-            System.out.println("    uuid  : " + p.player.uuid);
-            System.out.println("    seqno : \"" + p.player.seqno + "\"");
-            playerWriter.register_instance(p.player);
-            int status = playerWriter.write(p.player, HANDLE_NIL.value);
-            ErrorHandler.checkStatus(status, "MsgDataWriter.write");
-            try {
-                Thread.sleep(4000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            // clean up
-            mgr.getPublisher().delete_datawriter(playerWriter);
-            mgr.deletePublisher();
-            mgr.deleteTopic();
-            mgr.deleteParticipant();
-        };
-        Thread w = new Thread(b);
-        w.start();
-
+        System.out.println("=== [Player Publisher] writing a message containing :");
+        System.out.println("    uuid  : " + p.player.uuid);
+        System.out.println("    seqno : \"" + p.player.seqno + "\"");
+        playerWriter.register_instance(p.player);
+        int status = playerWriter.write(p.player, HANDLE_NIL.value);
+        ErrorHandler.checkStatus(status, "MsgDataWriter.write");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        // clean up
+        mgr.getPublisher().delete_datawriter(playerWriter);
+        mgr.deletePublisher();
+        mgr.deleteTopic();
+        mgr.deleteParticipant();
 
     }
     public static void main(String args[]){
@@ -66,7 +61,7 @@ public class Player  {
 //        System.out.println("Enter a number: ");
 //        int n = reader.nextInt();
 //        System.out.println("number: " + n);
-        Publish("", p);
+        //Publish("Player", p);
 
     }
 }

@@ -16,7 +16,6 @@
       <env name="OSPL_HOME" value="." />
       <env name="PATH" value=".\bin;.\lib;" />
       <env name="OSPL_URI" value="file://.\etc\config\ospl.xml" />
-     
     </envs>
     <method />
   </configuration>

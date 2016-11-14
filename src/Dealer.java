@@ -10,13 +10,14 @@ public class Dealer {
 
     public static int NUMBER_OF_DECKS = 6;
 
-    public static bjDealer dealer;
+    private  bjDealer dealer;
     Dealer(){
         dealer = new bjDealer();
         dealer.uuid = UUIDGen.generate_UUID();
         dealer.seqno = 0;
         dealer.action = bjd_action.waiting;
         dealer.cards = new CR.card[Dealer.NUMBER_OF_DECKS*52];
+
     }
 
     public static void Subscribe(){
@@ -89,41 +90,41 @@ public class Dealer {
         sampleThread.start();
     }
 
-    public static void Publish(){
-        DDSEntityManager mgr = new DDSEntityManager();
-        String partitionName = "Dealer";
-        // create Domain Participant
-        mgr.createParticipant(partitionName);
-        // create Type
-        bjDealerTypeSupport msgTS = new bjDealerTypeSupport();
-        mgr.registerType(msgTS);
-        // create Topic
-        mgr.createTopic("Dealer");
-        // create Publisher
-        mgr.createPublisher();
-        // create DataWriter
-        mgr.createWriter();
-        // Publish Events
-        DataWriter dwriter = mgr.getWriter();
-        bjDealerDataWriter HelloWorldWriter = bjDealerDataWriterHelper.narrow(dwriter);
-        bjDealer msgInstance = new bjDealer();
-        msgInstance.action = bjd_action.waiting;
-        System.out.println("=== [Publisher] writing a message containing :");
-        System.out.println("    uuid  : " + msgInstance.uuid);
-        System.out.println("    seqno : \"" + msgInstance.seqno + "\"");
-        HelloWorldWriter.register_instance(msgInstance);
-        int status = HelloWorldWriter.write(msgInstance, HANDLE_NIL.value);
-        ErrorHandler.checkStatus(status, "MsgDataWriter.write");
-        try {
-            Thread.sleep(4000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        // clean up
-        mgr.getPublisher().delete_datawriter(HelloWorldWriter);
-        mgr.deletePublisher();
-        mgr.deleteTopic();
-        mgr.deleteParticipant();
+    public static void Publish(String partitionName, Dealer d){
+
+            DDSEntityManager mgr = new DDSEntityManager();
+            // create Domain Participant
+            mgr.createParticipant(partitionName);
+            // create Type
+            bjDealerTypeSupport msgTS = new bjDealerTypeSupport();
+            mgr.registerType(msgTS);
+            // create Topic
+            mgr.createTopic(partitionName);
+            // create Publisher
+            mgr.createPublisher();
+            // create DataWriter
+            mgr.createWriter();
+            // Publish Events
+            DataWriter dwriter = mgr.getWriter();
+            bjDealerDataWriter dealerWriter = bjDealerDataWriterHelper.narrow(dwriter);
+//            bjPlayer msgInstance = new bjPlayer();
+            System.out.println("=== [Dealer Publisher] writing a message containing :");
+            System.out.println("    uuid  : " + d.dealer.uuid);
+            System.out.println("    seqno : \"" + d.dealer.seqno + "\"");
+            dealerWriter.register_instance(d.dealer);
+            int status = dealerWriter.write(d.dealer, HANDLE_NIL.value);
+            ErrorHandler.checkStatus(status, "MsgDataWriter.write");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            // clean up
+            mgr.getPublisher().delete_datawriter(dealerWriter);
+            mgr.deletePublisher();
+            mgr.deleteTopic();
+            mgr.deleteParticipant();
+
 
     }
 
@@ -135,7 +136,8 @@ public class Dealer {
         Scanner reader = new Scanner(System.in);  // Reading from System.in
         //Subscribe();
         Dealer d = new Dealer();
-
+        Publish("Dealer_init", d);
+        d.dealer.action = bjd_action.shuffling;
         CardFunctions.GenerateDeck(d.dealer.cards);
         CardFunctions.ShuffleCards(d.dealer.cards);
         CardFunctions.PrintDeck(d.dealer.cards);
@@ -145,7 +147,7 @@ public class Dealer {
         d.dealer.cards = cd.c.clone();
         System.out.println(d.dealer.cards.length);
         System.out.println(cd.card);
-        Publish();
+        Publish("Dealer", d);
 
     }
 
