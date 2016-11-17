@@ -11,13 +11,13 @@ import java.util.UUID;
 public class GameManager {
     private static final String dealerInit = "Dealer_init";
     private static final String playerInit = "Player_init";
+    public static ArrayList<bjDealer> dealers = null;
+    public static ArrayList<Table> tables = null;
     public boolean playerJoined = false;
     public boolean dealerJoined = false;
     public boolean playerRunning = true;
     public boolean dealerRunning = true;
     public ArrayList<bjPlayer> players = null;
-    public ArrayList<bjDealer> dealers = null;
-    public ArrayList<Table> tables = null;
     UUID id;
     private boolean playerInitTh = false, dealerInitTh = false, player = false, dealer = false;
     GameManager(){
@@ -38,13 +38,14 @@ public class GameManager {
 
     public static void NewGame(GameManager n) {
         n.players = new ArrayList<>();
-        n.dealers = new ArrayList<>();
+        dealers = new ArrayList<>();
         n.initializeDealer();
         n.initializePlayer();
         n.subscribe();
         while (n.playerRunning || n.dealerRunning) {
             if (n.playerRunning && n.dealerRunning) {
                 n.DisplayMenu();
+                n.subscribe();
             }
         }
     }
@@ -212,7 +213,7 @@ public class GameManager {
                             dealers.add(bjDealerSeq.value[i]);
                             for (bjPlayer p : players) {
                                 if (p.dealer_id == 0) {
-                                    AssignTable(bjDealerSeq.value[i], null);
+                                    AssignTable(null, p);
                                 }
                             }
                         }
@@ -329,17 +330,48 @@ public class GameManager {
 
     public void AssignTable(bjDealer d, bjPlayer p) {
         if (p == null && d != null) {
-            tables.add(new Table(d));
-            System.out.println("Dealer with uuid " + d.uuid + " assigned to Table with uuid " + tables.get(tables.size() - 1).getUUID());
+            Table t1 = null;
+            for (Table t : tables) {
+                if (t.dealer == null) {
+                    t1 = t;
+                    break;
+                }
+            }
+            if (t1 == null) {
+                tables.add(new Table(d));
+                System.out.println("Dealer with uuid " + d.uuid + " assigned to Table with uuid " + tables.get(tables.size() - 1).getUUID());
+            } else {
+                t1.dealer = d;
+                System.out.println("Dealer with uuid " + d.uuid + " assigned to Table with uuid " + t1.getUUID());
+                for (bjPlayer player : t1.players) {
+                    player.dealer_id = d.uuid;
+                    System.out.println("From GM " + id + " === Player with uuid " + player.uuid + " reassigned to Dealer with uuid " + t1.dealer.uuid);
+                }
+
+            }
+
         }
         if (d == null && p != null) {
-            for (Table t : tables) {
-                if (t.players.size() < 6) {
-                    p.dealer_id = t.dealer.uuid;
-                    t.players.add(p);
-                    System.out.println("From GM " + id + " === Player with uuid " + p.uuid + " added to Table with uuid " + t.getUUID() + " with Dealer with uuid " + t.dealer.uuid);
+            if (tables.size() == 0) {
 
-                    break;
+                tables.add(new Table(null, p));
+//                for(Table t : tables){
+//                    if(t.dealer == null)
+//                    {
+//
+//                    }
+//                }
+
+                System.out.println("From GM " + id + " === WARNING!!! Player with uuid " + p.uuid + " added to Table with uuid " + tables.get(tables.size() - 1).getUUID() + " without Dealer");
+            } else {
+                for (Table t : tables) {
+                    if (t.players.size() < 6) {
+                        p.dealer_id = t.dealer.uuid;
+                        t.players.add(p);
+                        System.out.println("From GM " + id + " === Player with uuid " + p.uuid + " added to Table with uuid " + t.getUUID() + " with Dealer with uuid " + t.dealer.uuid);
+
+                        break;
+                    }
                 }
             }
         }
@@ -429,16 +461,8 @@ public class GameManager {
     }
 
     public void subscribe() {
-        Runnable backGroundRunnable = () -> {
-            boolean a = true;
-            while(a) {
-                if (playerJoined && dealerJoined) {
-                    a = false;
-                }
-            }
-        };
-        Thread sampleThread = new Thread(backGroundRunnable);
-        sampleThread.start();
+        SubscribeToDealer();
+        SubscribeToPlayer();
     }
 
     public void DisplayMenu() {

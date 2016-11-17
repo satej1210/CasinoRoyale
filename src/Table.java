@@ -13,7 +13,11 @@ public class Table {
     ArrayList<bjPlayer> players;
 
     Table(bjDealer d) {
+        if (u == null)
+            u = UUID.randomUUID();
         dealer = d;
+        if (players == null)
+            players = new ArrayList<>();
     }
 
     Table(bjDealer d, bjPlayer p) {
@@ -36,4 +40,17 @@ public class Table {
             System.out.println("Players full");
         }
     }
+
+    @Override
+    public String toString() {
+        String s;
+        s = "Table " + getUUID() + "\n";
+        s += "Dealer: \n" + new Dealer(dealer) + "\n";
+        int j = 0;
+        for (bjPlayer p : players) {
+            s += "Player " + ++j + ":\n\t" + p.uuid + "\n";
+        }
+        return s;
+    }
+
 }

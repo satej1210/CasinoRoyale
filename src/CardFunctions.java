@@ -8,22 +8,24 @@ import java.util.Stack;
  * Created by satejmhatre on 11/4/16.
  */
 public class CardFunctions {
-    public static CardAndDeck PickCard(ArrayList<CR.card> cards) {
+    public static card PickCard(ArrayList<CR.card> cards) {
         Stack cardList = new Stack<CR.card>();
         cardList.addAll(cards);
         CR.card c = (CR.card)cardList.pop();
         ArrayList t = new ArrayList(cardList);
+        cards = t;
 
-        CR.card newDeck[] = new CR.card[t.size()];
-        newDeck = (CR.card[])t.toArray(newDeck);
 
-        return new CardAndDeck(newDeck, c);
+        return c;
     }
 
     public static void PrintDeck(ArrayList<CR.card> cards) {
         for (int i = 0; i < cards.size(); ++i) {
             if(i%52==0)System.out.println("Deck");
-            System.out.println(cards.get(i));
+            String s;
+            s = Character.toString(cards.get(i).suite);
+            s += Character.toString(cards.get(i).base_value);
+            System.out.println(s);
         }
     }
 
@@ -48,8 +50,8 @@ public class CardFunctions {
         for (int i = 0; i < array.size(); i++) {
             int randomPosition = rgen.nextInt(array.size());
             CR.card temp = array.get(i);
-            array.add(i, array.get(randomPosition));
-            array.add(randomPosition, temp);
+            array.set(i, array.get(randomPosition));
+            array.set(randomPosition, temp);
         }
 
         return array;

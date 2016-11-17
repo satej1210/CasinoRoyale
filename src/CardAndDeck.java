@@ -8,4 +8,12 @@ public class CardAndDeck {
         c = _c.clone();
         card = d;
     }
+
+    @Override
+    public String toString() {
+        String s = "";
+        s += card.suite;
+        s += card.base_value;
+        return s;
+    }
 }
