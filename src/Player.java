@@ -76,8 +76,8 @@ public class Player  {
                         ANY_SAMPLE_STATE.value, ANY_VIEW_STATE.value,
                         ANY_INSTANCE_STATE.value);
                 for (int i = 0; i < msgSeq.value.length; i++) {
-                    if (msgSeq.value[i].getClass() == bjDealer.class && msgSeq.value[i].uuid == this.player.dealer_id && msgSeq.value[i].action == bjd_action.collecting) {//.message.equals("Hello World")) {
-                        System.out.println("=== [DealerSubscriber] message received from Dealer :");
+                    if (msgSeq.value[i].getClass() == bjDealer.class && msgSeq.value[i].action == bjd_action.collecting) {//.message.equals("Hello World")) {
+                        System.out.println("=== [DealerSubscriber] message received from Dealer with id " + msgSeq.value[i].uuid + " :");
                         Scanner a = new Scanner(System.in);
                         System.out.println("Enter bets:");
                         int x = a.nextInt();
@@ -139,8 +139,68 @@ public class Player  {
         // clean up
         mgr.getPublisher().delete_datawriter(playerWriter);
         mgr.deletePublisher();
+
         mgr.deleteTopic();
         mgr.deleteParticipant();
+        boolean recievedDealerID = false;
+        while (!recievedDealerID) {
+            partitionName = "Dealer";
+
+            // create Domain Participant
+            mgr.createParticipant(partitionName);
+
+            // create Type
+            bjDealerTypeSupport msgTSs = new bjDealerTypeSupport();
+            mgr.registerType(msgTSs);
+
+            // create Topic
+            mgr.createTopic("Dealer");
+
+            // create Subscriber
+            mgr.createSubscriber();
+
+            // create DataReader
+            mgr.createReader();
+
+            // Read Events
+
+            DataReader dreader = mgr.getReader();
+            bjDealerDataReader HelloWorldReader = bjDealerDataReaderHelper.narrow(dreader);
+
+            bjDealerSeqHolder msgSeq = new bjDealerSeqHolder();
+            SampleInfoSeqHolder infoSeq = new SampleInfoSeqHolder();
+
+            System.out.println("=== [DealerSubscriber] Waiting for dealer: ...");
+            boolean terminate = false;
+            int count = 0;
+            while (!terminate) { // We dont want the example to run indefinitely
+                HelloWorldReader.take(msgSeq, infoSeq, LENGTH_UNLIMITED.value,
+                        ANY_SAMPLE_STATE.value, ANY_VIEW_STATE.value,
+                        ANY_INSTANCE_STATE.value);
+                for (int i = 0; i < msgSeq.value.length; i++) {
+                    if (msgSeq.value[i].getClass() == bjDealer.class && msgSeq.value[i].action == bjd_action.waiting) {//.message.equals("Hello World")) {
+                        System.out.println("=== [DealerSubscriber] message received from Dealer with id " + msgSeq.value[i].uuid + " :");
+                        this.player.dealer_id = msgSeq.value[i].uuid;
+                        terminate = true;
+                    }
+                }
+                try {
+                    Thread.sleep(200);
+                } catch (InterruptedException ie) {
+                    // nothing to do
+                }
+                ++count;
+
+            }
+            HelloWorldReader.return_loan(msgSeq, infoSeq);
+
+            // clean up
+            mgr.getSubscriber().delete_datareader(HelloWorldReader);
+            mgr.deleteSubscriber();
+            mgr.deleteTopic();
+            mgr.deleteParticipant();
+
+        }
 
     }
 

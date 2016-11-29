@@ -74,6 +74,7 @@ public class Dealer {
         mgr.deletePublisher();
         mgr.deleteTopic();
         mgr.deleteParticipant();
+        p.WaitForPlayer();
 
 
     }
@@ -104,6 +105,66 @@ public class Dealer {
         System.out.println("number: " + n);
 //        Publish("Dealer", d);
 
+    }
+
+    public void WaitForPlayer() {
+        DDSEntityManager mgr = new DDSEntityManager();
+        String partitionName = "Player";
+
+        // create Domain Participant
+        mgr.createParticipant(partitionName);
+
+        // create Type
+        bjPlayerTypeSupport msgTS = new bjPlayerTypeSupport();
+        mgr.registerType(msgTS);
+
+        // create Topic
+        mgr.createTopic("Player");
+
+        // create Subscriber
+        mgr.createSubscriber();
+
+        // create DataReader
+        mgr.createReader();
+
+        // Read Events
+
+        DataReader dreader = mgr.getReader();
+        bjPlayerDataReader HelloWorldReader = bjPlayerDataReaderHelper.narrow(dreader);
+
+        bjPlayerSeqHolder msgSeq = new bjPlayerSeqHolder();
+        SampleInfoSeqHolder infoSeq = new SampleInfoSeqHolder();
+
+        System.out.println("=== [Subscriber] Ready ...");
+        boolean terminate = false;
+        int count = 0;
+        while (!terminate) { // We dont want the example to run indefinitely
+            HelloWorldReader.take(msgSeq, infoSeq, LENGTH_UNLIMITED.value,
+                    ANY_SAMPLE_STATE.value, ANY_VIEW_STATE.value,
+                    ANY_INSTANCE_STATE.value);
+            for (int i = 0; i < msgSeq.value.length; i++) {
+                if (msgSeq.value[i].getClass() == bjPlayer.class && msgSeq.value[i].action == bjp_action.joining) {//.message.equals("Hello World")) {
+                    System.out.println("=== [DealerSubscriber] Player message: joining :");
+
+                    terminate = true;
+                }
+
+            }
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException ie) {
+                // nothing to do
+            }
+            ++count;
+
+        }
+        HelloWorldReader.return_loan(msgSeq, infoSeq);
+
+        // clean up
+        mgr.getSubscriber().delete_datareader(HelloWorldReader);
+        mgr.deleteSubscriber();
+        mgr.deleteTopic();
+        mgr.deleteParticipant();
     }
 
     public void Subscribe() {
