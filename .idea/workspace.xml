@@ -4,17 +4,8 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98df0f42-e8ec-48c6-9c5b-a9b7155918c4" name="Default" comment="more">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PlayerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CR/Dealer.class" afterPath="$PROJECT_DIR$/out/production/CR/Dealer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CR/Player.class" afterPath="$PROJECT_DIR$/out/production/CR/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="98df0f42-e8ec-48c6-9c5b-a9b7155918c4" name="Default" comment="mo">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ospl-error.log" afterPath="$PROJECT_DIR$/ospl-error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ospl-info.log" afterPath="$PROJECT_DIR$/ospl-info.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dealer.java" afterPath="$PROJECT_DIR$/src/Dealer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.java" afterPath="$PROJECT_DIR$/src/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Snooper.java" afterPath="$PROJECT_DIR$/src/Snooper.java" />
     </list>
     <ignored path="CR.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,7 +97,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#868#869#0" expanded="false" />
+                <element signature="e#898#899#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -966,7 +960,7 @@
       <workItem from="1480650514483" duration="440000" />
       <workItem from="1480709727108" duration="938000" />
       <workItem from="1480908469911" duration="30703000" />
-      <workItem from="1481008189927" duration="4890000" />
+      <workItem from="1481008189927" duration="5049000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Dealer&#10;Made Table class&#10;">
       <created>1479155099763</created>
@@ -1031,7 +1025,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481011158222</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="mo">
+      <created>1481013267615</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1481013267615</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1067,7 +1068,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113369000" />
+    <option name="totallyTimeSpent" value="113528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1151,7 +1152,8 @@
     <MESSAGE value="needs more work" />
     <MESSAGE value="more workkkk" />
     <MESSAGE value="more" />
-    <option name="LAST_COMMIT_MESSAGE" value="more" />
+    <MESSAGE value="mo" />
+    <option name="LAST_COMMIT_MESSAGE" value="mo" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1568,7 +1570,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#868#869#0" expanded="false" />
+            <element signature="e#898#899#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
