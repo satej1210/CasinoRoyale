@@ -151,22 +151,11 @@ public class Dealer {
         l.playerCards.add(this.dealer.cards[0]);
         CardFunctions.PrintCard(this.dealer.cards[0]);
         System.out.println("Dealing Cards ");
-//        for(int i = 0; i < 21; ++i) {
-//            if(this.dealer.cards[i].suite==0) {
-//
-//
-//
-////                CardFunctions.PrintCard(this.dealer.cards[i]);
-//                break;
-//            }
-//        }
-
         this.Publish(bjd_action.dealing);
     }
 
     public void PlayerWagering(bjPlayer p) {
-        DealerPrint("Player set wager"
-        );
+        DealerPrint("Player set wager");
         for (player_status t :
                 this.dealer.players) {
             if (t.uuid == p.uuid) {
@@ -188,7 +177,7 @@ public class Dealer {
                 break;
             }
         }
-
+        CheckSize();
         if (!flag && playerCount + 1 < 6) {
             this.dealer.players[playerCount].uuid = p.uuid;
             this.dealer.players[playerCount++].wager = p.wager;
@@ -236,33 +225,50 @@ public class Dealer {
         }
     }
 
+    public void CheckSize() {
+        if (players.size() >= 6) {
+            System.out.println("Players full");
+        }
+    }
+
+    public void Sub2(bjPlayerSeqHolder msgSeq) {
+        for (int i = 0; i < msgSeq.value.length; i++) {
+            bjPlayer p = msgSeq.value[i];
+            if (p.getClass() == bjPlayer.class) {//.message.equals("Hello World")) {
+                this.dealer.target_uuid = p.uuid;
+                if (p.action == bjp_action.joining) {
+                    this.PlayerJoining(p);
+                }
+                if (p.action == bjp_action.wagering) {
+                    this.PlayerWagering(p);
+                    this.DealCards(p);
+                    this.DealToSelf();
+                }
+                if (p.action == bjp_action.requesting_a_card) {
+                    this.DealCards(p);
+
+                }
+                if (p.action == bjp_action.exiting) {
+                    this.PlayerExiting(p);
+                }
+
+            }
+
+
+        }
+    }
     public void Subscribe() {
         Runnable b = () -> {
             DDSEntityManager mgr = new DDSEntityManager();
-
             String partitionName = "CR";
-
-            // create Domain Participant
             mgr.createParticipant(partitionName);
-
-            // create Type
             bjPlayerTypeSupport msgTS = new bjPlayerTypeSupport();
             mgr.registerType(msgTS);
-
-            // create Topic
             mgr.createTopic("Player");
-
-            // create Subscriber
             mgr.createSubscriber();
-
-            // create DataReader
             mgr.createReader();
-
-            // Read Events
-
             DataReader dreader = mgr.getReader();
             bjPlayerDataReader HelloWorldReader = bjPlayerDataReaderHelper.narrow(dreader);
-
             bjPlayerSeqHolder msgSeq = new bjPlayerSeqHolder();
             SampleInfoSeqHolder infoSeq = new SampleInfoSeqHolder();
 
@@ -272,29 +278,7 @@ public class Dealer {
                 HelloWorldReader.take(msgSeq, infoSeq, LENGTH_UNLIMITED.value,
                         ANY_SAMPLE_STATE.value, ANY_VIEW_STATE.value,
                         ANY_INSTANCE_STATE.value);
-                for (int i = 0; i < msgSeq.value.length; i++) {
-                    bjPlayer p = msgSeq.value[i];
-                    if (p.getClass() == bjPlayer.class) {//.message.equals("Hello World")) {
-                        this.dealer.target_uuid = p.uuid;
-                        if (p.action == bjp_action.joining) {
-                            this.PlayerJoining(p);
-                        }
-                        if (p.action == bjp_action.wagering) {
-                            this.PlayerWagering(p);
-                            this.DealCards(p);
-                            this.DealToSelf();
-                        }
-                        if (p.action == bjp_action.requesting_a_card) {
-                            this.DealCards(p);
-                        }
-                        if (p.action == bjp_action.exiting) {
-                            this.PlayerExiting(p);
-                        }
-
-                    }
-
-
-                }
+                Sub2(msgSeq);
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException ie) {

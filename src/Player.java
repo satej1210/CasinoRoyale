@@ -25,6 +25,7 @@ public class Player {
         this.Publish(bjp_action.joining);
     }
 
+
     public static void main(String args[]) {
         Player p = new Player();
 

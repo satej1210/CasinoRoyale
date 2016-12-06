@@ -30,6 +30,20 @@ public class CardFunctionsTest extends TestCase {
         assertNotSame("Arrays should not be equal : ", test, org);
     }
 
-
+    public void testGetValue() throws Exception {
+        assertEquals(2, CardFunctions.GetValue('2'));
+        assertEquals(3, CardFunctions.GetValue('3'));
+        assertEquals(4, CardFunctions.GetValue('4'));
+        assertEquals(5, CardFunctions.GetValue('5'));
+        assertEquals(6, CardFunctions.GetValue('6'));
+        assertEquals(7, CardFunctions.GetValue('7'));
+        assertEquals(8, CardFunctions.GetValue('8'));
+        assertEquals(9, CardFunctions.GetValue('9'));
+        assertEquals(10, CardFunctions.GetValue('T'));
+        assertEquals(10, CardFunctions.GetValue('K'));
+        assertEquals(10, CardFunctions.GetValue('Q'));
+        assertEquals(10, CardFunctions.GetValue('J'));
+        assertEquals(11, CardFunctions.GetValue('A'));
+    }
 
 }
