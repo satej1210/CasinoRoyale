@@ -30,13 +30,6 @@ public class CardFunctionsTest extends TestCase {
         assertNotSame("Arrays should not be equal : ", test, org);
     }
 
-    public void testPickCard() throws Exception {
-        ArrayList<CR.card> test = new ArrayList<>();
 
-        CardFunctions.GenerateDeck(test);
-        ArrayList<CR.card> org = new ArrayList<>(test);
-        CardFunctions.ShuffleCards(test);
-        assertNotSame("Arrays should not be equal : ", test, org);
-    }
 
 }

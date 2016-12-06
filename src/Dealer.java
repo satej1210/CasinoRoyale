@@ -40,7 +40,7 @@ public class Dealer {
     public static void main(String args[]) {
         Dealer d = new Dealer();
         d.dealer.action = bjd_action.shuffling;
-        d.Publish(bjd_action.waiting);
+        //d.Publish(bjd_action.waiting);
         d.Subscribe();
 
 //        CardFunctions.PrintDeck(d.cards);
@@ -178,6 +178,64 @@ public class Dealer {
 
     }
 
+    public void PlayerJoining(bjPlayer p) {
+        boolean flag = false;
+        System.out.println("=== [DealerSubscriber] Player message: joining :");
+        for (player_status a : this.dealer.players) {
+            if (a.uuid == p.uuid) {
+                System.out.println("Player exists");
+                flag = true;
+                break;
+            }
+        }
+
+        if (!flag && playerCount + 1 < 6) {
+            this.dealer.players[playerCount].uuid = p.uuid;
+            this.dealer.players[playerCount++].wager = p.wager;
+
+            this.Publish(bjd_action.waiting);
+            this.Publish(bjd_action.collecting);
+        }
+    }
+
+    public void PlayerExiting(bjPlayer p) {
+        PlayerCards t = null;
+        for (PlayerCards e : players) {
+            if (p.uuid == e.uuid) {
+                t = e;
+            }
+        }
+        if (t == null) {
+            DealerPrint("Unknown Player Exiting");
+        } else {
+            int sum = 0;
+            int aceExists = 0;
+            for (card c : t.playerCards) {
+                if (c.base_value == 'A') {
+                    aceExists++;
+                }
+                sum += CardFunctions.GetValue(c.base_value);
+            }
+            if (sum > 21) {
+                while (aceExists != 0) {
+                    sum -= 10;
+                    aceExists--;
+                    if (sum == 21) {
+                        DealerPrint("BLACKJACK!");
+                        break;
+                    }
+                }
+                if (sum > 21) {
+                    DealerPrint("Player has busted!");
+                    t.playerCards = null;
+                }
+            }
+            if (sum == 21) {
+                DealerPrint("BLACKJACK!");
+            }
+        }
+    }
+
     public void Subscribe() {
         Runnable b = () -> {
             DDSEntityManager mgr = new DDSEntityManager();
@@ -210,8 +268,6 @@ public class Dealer {
 
             System.out.println("=== [Subscriber] Ready ...");
             boolean terminate = false;
-            boolean flag = false;
-            int count = 0;
             while (!terminate) { // We dont want the example to run indefinitely
                 HelloWorldReader.take(msgSeq, infoSeq, LENGTH_UNLIMITED.value,
                         ANY_SAMPLE_STATE.value, ANY_VIEW_STATE.value,
@@ -221,23 +277,7 @@ public class Dealer {
                     if (p.getClass() == bjPlayer.class) {//.message.equals("Hello World")) {
                         this.dealer.target_uuid = p.uuid;
                         if (p.action == bjp_action.joining) {
-                            System.out.println("=== [DealerSubscriber] Player message: joining :");
-                            for (player_status a : this.dealer.players) {
-                                if (a.uuid == p.uuid) {
-                                    System.out.println("Player exists");
-                                    flag = true;
-                                    break;
-                                }
-                            }
-
-                            if (!flag && playerCount + 1 < 6) {
-                                this.dealer.players[playerCount].uuid = p.uuid;
-                                this.dealer.players[playerCount++].wager = p.wager;
-
-//                            this.Publish(bjd_action.waiting);
-                                this.Publish(bjd_action.collecting);
-                            }
-
+                            this.PlayerJoining(p);
                         }
                         if (p.action == bjp_action.wagering) {
                             this.PlayerWagering(p);
@@ -248,41 +288,7 @@ public class Dealer {
                             this.DealCards(p);
                         }
                         if (p.action == bjp_action.exiting) {
-                            PlayerCards t = null;
-                            for (PlayerCards e : players) {
-                                if (p.uuid == e.uuid) {
-                                    t = e;
-                                }
-                            }
-                            if (t == null) {
-                                DealerPrint("Unknown Player Exiting");
-                            } else {
-                                int sum = 0;
-                                int aceExists = 0;
-                                for (card c : t.playerCards) {
-                                    if (c.base_value == 'A') {
-                                        aceExists++;
-                                    }
-                                    sum += CardFunctions.GetValue(c.base_value);
-                                }
-                                if (sum > 21) {
-                                    while (aceExists != 0) {
-                                        sum -= 10;
-                                        aceExists--;
-                                        if (sum == 21) {
-                                            DealerPrint("BLACKJACK!");
-                                            break;
-                                        }
-                                    }
-                                    if (sum > 21) {
-                                        DealerPrint("Player has busted!");
-                                        t.playerCards = null;
-                                    }
-                                }
-                                if (sum == 21) {
-                                    DealerPrint("BLACKJACK!");
-                                }
-                            }
+                            this.PlayerExiting(p);
                         }
 
                     }
@@ -294,8 +300,6 @@ public class Dealer {
                 } catch (InterruptedException ie) {
                     // nothing to do
                 }
-                ++count;
-
             }
             HelloWorldReader.return_loan(msgSeq, infoSeq);
 

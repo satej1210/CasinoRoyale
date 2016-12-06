@@ -39,15 +39,6 @@ public class CardFunctions {
             }
         }
     }
-    public static void PrintDeck(ArrayList<CR.card> cards) {
-        for (int i = 0; i < cards.size(); ++i) {
-            if(i%52==0)System.out.println("Deck");
-            String s;
-            s = Character.toString(cards.get(i).suite);
-            s += Character.toString(cards.get(i).base_value);
-            System.out.println(s);
-        }
-    }
 
     public static void GenerateDeck(ArrayList<CR.card> cards) {
         int count=0;
