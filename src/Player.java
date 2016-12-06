@@ -13,7 +13,7 @@ public class Player {
     private bjPlayer player = null;
     private ArrayList<CR.card> playerCards;
 
-    private Player() {
+    Player() {
         player = new bjPlayer();
         player.uuid = UUIDGen.generate_UUID();
         player.dealer_id = 0;
@@ -22,24 +22,17 @@ public class Player {
         player.action = bjp_action.none;
         player.seqno = 0;
         playerCards = new ArrayList<>();
-        this.Publish(bjp_action.joining);
+
     }
 
 
     public static void main(String args[]) {
         Player p = new Player();
-
+        p.Publish(bjp_action.joining);
         System.out.println(MAX_PLAYERS.value);
         Scanner reader = new Scanner(System.in);
         System.out.println("Waiting for action:");
         p.SubscribeDealer();
-
-
-//        System.out.println("Enter a number: ");
-//        int n = reader.nextInt();
-//        System.out.println("number: " + n);
-        //Publish("Player", p);
-
     }
 
     public void PlayerPrint(String x) {
@@ -61,6 +54,34 @@ public class Player {
         this.Publish(bjp_action.wagering);
     }
 
+    public String CheckSum(int sum, int aceExists) {
+        String s = "L21";
+        if (sum > 21) {
+            while (aceExists != 0) {
+                sum -= 10;
+                aceExists--;
+                if (sum == 21) {
+                    s = ("BLACKJACK!");
+                    break;
+                }
+            }
+            if (sum > 21) {
+                s = ("Sum = " + sum + "\nBUSTED!");
+                this.Publish(bjp_action.exiting);
+
+            }
+        } else if (sum == 21) {
+            s = ("BLACKJACK!");
+        }
+        return s;
+    }
+
+    /**
+     * The PlayCards method gets the cards from the dealer and adds that card to the player's hand of cards. It then calls
+     * the CheckSum function. Then the player is asked to Hit or Stay. The function then Publishes with the appropriate response.
+     *
+     * @param d The dealer of the player
+     */
     public void PlayCards(bjDealer d) {
         int sum = 0;
         card c = new card();
@@ -76,24 +97,7 @@ public class Player {
             }
             sum += CardFunctions.GetValue(playerCards.get(i).base_value);
         }
-        if (sum > 21) {
-            while (aceExists != 0) {
-                sum -= 10;
-                aceExists--;
-                if (sum == 21) {
-                    PlayerPrint("BLACKJACK!");
-                    break;
-                }
-            }
-            if (sum > 21) {
-                PlayerPrint("Sum = " + sum + "\nBUSTED!");
-                this.Publish(bjp_action.exiting);
-                return;
-            }
-        }
-        if (sum == 21) {
-            PlayerPrint("BLACKJACK!");
-        }
+        PlayerPrint(this.CheckSum(sum, aceExists));
         Scanner a = new Scanner(System.in);
         PlayerPrint("Sum = " + sum + "\nHit(1) or Stay(2)?:");
         int x = a.nextInt();

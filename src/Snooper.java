@@ -13,7 +13,6 @@ public class Snooper {
     private static final String dealerInit = "Dealer_init";
     private static final String playerInit = "Player_init";
     public static ArrayList<bjDealer> dealers = null;
-    public static ArrayList<Table> tables = null;
     public boolean playerJoined = false;
     public boolean dealerJoined = false;
     public boolean playerRunning = true;
@@ -26,7 +25,7 @@ public class Snooper {
         id = UUID.randomUUID();
         players = new ArrayList<>();
         dealers = new ArrayList<>();
-        tables = new ArrayList<>();
+        //tables = new ArrayList<>();
     }
 
     public static int Start() {
@@ -206,21 +205,7 @@ public class Snooper {
                                 break;
                             }
                         }
-                        if (!exists) {
-                            System.out.println("From GM " + id + " === [DealerInitSubscriber] message received from new Dealer:");
-                            System.out.println("A Dealer with UUID " + bjDealerSeq.value[i].uuid + " has joined!");
-                            dealers.add(bjDealerSeq.value[i]);
-                            for (bjPlayer p : players) {
-                                if (p.dealer_id == 0) {
-                                    AssignTable(null, p);
-                                }
-                            }
-                        }
-                        System.out.println("From GM " + id + " Now assigning Table to dealer: ");
-                        AssignTable(bjDealerSeq.value[i], null);
-                        System.out.println("From GM " + id + " === [DealerInitSubscriber] message received from new Dealer :");
-                        System.out.println("Dealer is now waiting...");
-                        dealerJoined = true;
+
 
                     }
 
@@ -321,66 +306,7 @@ public class Snooper {
         sampleThread.start();
     }
 
-    public void AssignTable(bjDealer d, bjPlayer p) {
-        if (p == null && d != null) {
-            Table t1 = null;
-            for (Table t : tables) {
-                if (t.dealer == null) {
-                    t1 = t;
-                    break;
-                }
-            }
-            if (t1 == null) {
-                tables.add(new Table(d));
-                System.out.println("Dealer with uuid " + d.uuid + " assigned to Table with uuid " + tables.get(tables.size() - 1).getUUID());
-            } else {
-                t1.dealer = d;
-                System.out.println("Dealer with uuid " + d.uuid + " assigned to Table with uuid " + t1.getUUID());
-                for (bjPlayer player : t1.players) {
-                    player.dealer_id = d.uuid;
-                    System.out.println("From GM " + id + " === Player with uuid " + player.uuid + " reassigned to Dealer with uuid " + t1.dealer.uuid);
-                }
 
-            }
-
-        }
-        if (d == null && p != null) {
-            if (tables.size() == 0) {
-
-                tables.add(new Table(null, p));
-//                for(Table t : tables){
-//                    if(t.dealer == null)
-//                    {
-//
-//                    }
-//                }
-
-                System.out.println("From GM " + id + " === WARNING!!! Player with uuid " + p.uuid + " added to Table with uuid " + tables.get(tables.size() - 1).getUUID() + " without Dealer");
-            } else {
-                for (Table t : tables) {
-                    if (t.players.size() < 6) {
-                        p.dealer_id = t.dealer.uuid;
-                        t.players.add(p);
-                        System.out.println("From GM " + id + " === Player with uuid " + p.uuid + " added to Table with uuid " + t.getUUID() + " with Dealer with uuid " + t.dealer.uuid);
-
-                        break;
-                    }
-                }
-            }
-        }
-//        if(d!=null && p!=null){
-//            for(Table table: tables) {
-//                if (table.players.size() >= 6) {
-//                    continue;
-//                }
-//                else{
-//                    p.dealer_id = d.uuid;
-//                    tables.add(new Table(d, p));
-//                }
-//            }
-//
-//        }
-    }
 
     public void SubscribeToDealer() {
         DDSEntityManager mgr = new DDSEntityManager();

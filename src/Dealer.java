@@ -234,7 +234,7 @@ public class Dealer {
     public void Sub2(bjPlayerSeqHolder msgSeq) {
         for (int i = 0; i < msgSeq.value.length; i++) {
             bjPlayer p = msgSeq.value[i];
-            if (p.getClass() == bjPlayer.class) {//.message.equals("Hello World")) {
+            if (p.getClass() == bjPlayer.class) {
                 this.dealer.target_uuid = p.uuid;
                 if (p.action == bjp_action.joining) {
                     this.PlayerJoining(p);
@@ -246,7 +246,7 @@ public class Dealer {
                 }
                 if (p.action == bjp_action.requesting_a_card) {
                     this.DealCards(p);
-
+                    this.DealToSelf();
                 }
                 if (p.action == bjp_action.exiting) {
                     this.PlayerExiting(p);
