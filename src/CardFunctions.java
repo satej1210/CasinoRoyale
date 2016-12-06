@@ -19,6 +19,25 @@ public class CardFunctions {
         return c;
     }
 
+    public static int GetValue(char b) {
+        if (b == 'K' || b == 'Q' || b == 'J' || b == 'T') {
+            return 10;
+        } else {
+            return b - 48;
+        }
+    }
+
+    public static void PrintCard(CR.card card) {
+        System.out.println("Card:\nSuite:" + card.suite + "\nBase Value:" + card.base_value + "\nVisible:" + card.visible);
+    }
+
+    public static void PrintCards(ArrayList<CR.card> cards) {
+        for (int i = 0; i < cards.size(); ++i) {
+            if (cards.get(i).base_value != 0) {
+                PrintCard(cards.get(i));
+            }
+        }
+    }
     public static void PrintDeck(ArrayList<CR.card> cards) {
         for (int i = 0; i < cards.size(); ++i) {
             if(i%52==0)System.out.println("Deck");
