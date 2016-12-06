@@ -12,26 +12,25 @@ import java.util.Scanner;
 public class Player {
     private bjPlayer player = null;
     private ArrayList<CR.card> playerCards;
-
+    private int playerMode = 0; //1 : Mr. Conservative, 2 : Mr. I believe in Luck, 3 : Mr. Card Counter
     Player() {
         player = new bjPlayer();
         player.uuid = UUIDGen.generate_UUID();
         player.dealer_id = 0;
         player.wager = 0;
         player.credits = 100;
-        player.action = bjp_action.none;
+        player.action = bjp_action.joining;
         player.seqno = 0;
         playerCards = new ArrayList<>();
-
     }
-
 
     public static void main(String args[]) {
         Player p = new Player();
-        p.Publish(bjp_action.joining);
-        System.out.println(MAX_PLAYERS.value);
         Scanner reader = new Scanner(System.in);
-        System.out.println("Waiting for action:");
+        System.out.println("Choose Mode:\n1. Mr. Conservative\n2. Mr. I believe in Luck\n3. Mr. Card Counter\n : ");
+        int opt = reader.nextInt();
+        p.playerMode = opt;
+        p.Publish(bjp_action.joining);
         p.SubscribeDealer();
     }
 
@@ -76,6 +75,26 @@ public class Player {
         return s;
     }
 
+    public void PlayerModePlay(int sum) {
+        if (playerMode == 1) {
+            Scanner a = new Scanner(System.in);
+            PlayerPrint("Sum = " + sum + "\nHit(1) or Stay(2)?:");
+            int x;
+            if (sum < 17) {
+                x = 1;
+            } else {
+                x = 2;
+            }
+
+            if (x == 1) {
+                this.Publish(bjp_action.requesting_a_card);
+            } else {
+                PlayerPrint("Player is staying. Sum = " + sum);
+                this.Publish(bjp_action.none);
+            }
+        }
+    }
+
     /**
      * The PlayCards method gets the cards from the dealer and adds that card to the player's hand of cards. It then calls
      * the CheckSum function. Then the player is asked to Hit or Stay. The function then Publishes with the appropriate response.
@@ -98,13 +117,20 @@ public class Player {
             sum += CardFunctions.GetValue(playerCards.get(i).base_value);
         }
         PlayerPrint(this.CheckSum(sum, aceExists));
-        Scanner a = new Scanner(System.in);
-        PlayerPrint("Sum = " + sum + "\nHit(1) or Stay(2)?:");
-        int x = a.nextInt();
-        if (x == 1) {
-            this.Publish(bjp_action.requesting_a_card);
-        } else {
-            this.Publish(bjp_action.exiting);
+        PlayerModePlay(sum);
+    }
+
+    public void PlayerWin(bjDealer d) {
+        player_status m = null;
+        for (player_status ps : d.players) {
+            if (ps.uuid == this.player.uuid) {
+                m = ps;
+            }
+        }
+        if (m != null) {
+            float pay = (float) 3 / 2 * (float) m.wager;
+            this.player.credits += pay;
+            PlayerPrint("Credits = " + this.player.credits);
         }
     }
 
@@ -175,6 +201,10 @@ public class Player {
                                 if (d.action == bjd_action.dealing) {
                                     PlayerPrint("Cards Recieved");
                                     this.PlayCards(d);
+                                }
+                                if (d.action == bjd_action.paying) {
+                                    PlayerPrint("Player Wins!!!");
+                                    this.PlayerWin(d);
                                 }
                             }
                             this.player.seqno++;

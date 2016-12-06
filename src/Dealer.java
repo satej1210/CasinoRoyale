@@ -67,8 +67,8 @@ public class Dealer {
     public void Publish(bjd_action a) {
         DDSEntityManager mgr = new DDSEntityManager();
 
-        // create Domain Participant
-        mgr.createParticipant("CR");
+
+        mgr.createParticipant("CR"); // create Domain Participant
 
         // create Type
         bjDealerTypeSupport msgTS = new bjDealerTypeSupport();
@@ -128,7 +128,7 @@ public class Dealer {
         for (card d : dealerCards) {
             sum += CardFunctions.GetValue(d.base_value);
         }
-        //if (sum >)
+
     }
 
     public void DealCards(bjPlayer p) {
@@ -144,12 +144,10 @@ public class Dealer {
         }
         CardAndDeck cd = new CardAndDeck(cards);
         CardFunctions.PickCard(cd);
-        CardFunctions.PrintCard(cd.card);
         cards = cd.c;
         this.dealer.cards[0] = cd.card;
         this.dealer.cards[0].visible = false;
         l.playerCards.add(this.dealer.cards[0]);
-        CardFunctions.PrintCard(this.dealer.cards[0]);
         System.out.println("Dealing Cards ");
         this.Publish(bjd_action.dealing);
     }
@@ -178,12 +176,96 @@ public class Dealer {
             }
         }
         CheckSize();
-        if (!flag && playerCount + 1 < 6) {
+        if (!flag && playerCount + 1 < MAX_PLAYERS.value) {
             this.dealer.players[playerCount].uuid = p.uuid;
             this.dealer.players[playerCount++].wager = p.wager;
 
             this.Publish(bjd_action.waiting);
             this.Publish(bjd_action.collecting);
+        }
+    }
+
+    public void PlayerStay(bjPlayer p) {
+        DealerPrint("Player is Staying.");
+        PlayerCards t = null;
+        for (PlayerCards e : players) {
+            if (p.uuid == e.uuid) {
+                t = e;
+            }
+        }
+        if (t == null) {
+            DealerPrint("Unknown Player Staying");
+        } else {
+            int sum = 0;
+            int aceExists = 0;
+            for (card c : t.playerCards) {
+                if (c.base_value == 'A') {
+                    aceExists++;
+                }
+                sum += CardFunctions.GetValue(c.base_value);
+            }
+            if (sum > 21) {
+                while (aceExists != 0) {
+                    sum -= 10;
+                    aceExists--;
+                    if (sum == 21) {
+                        DealerPrint("Player BLACKJACK!");
+                        break;
+                    }
+                }
+                if (sum > 21) {
+                    DealerPrint("Player has busted!");
+                    t.playerCards = null;
+                }
+            }
+            if (sum == 21) {
+                DealerPrint("Player BLACKJACK!");
+            }
+
+            int dealerSum = 0;
+            int dealerAceExists = 0;
+            for (card c : dealerCards) {
+                if (c.base_value == 'A') {
+                    dealerAceExists++;
+                }
+                dealerSum += CardFunctions.GetValue(c.base_value);
+            }
+            DealerPrint("Sum = " + dealerSum);
+            if (dealerSum == 17) {
+                DealerPrint("Dealer is Staying");
+            }
+            while (dealerSum < 17) {
+                DealerPrint("Dealer is hitting");
+                this.DealToSelf();
+                for (card c : dealerCards) {
+                    if (c.base_value == 'A') {
+                        dealerAceExists++;
+                    }
+                    dealerSum += CardFunctions.GetValue(c.base_value);
+                }
+            }
+            if (dealerSum == 17) {
+                DealerPrint("Dealer is Staying");
+            }
+            if (dealerSum > 21) {
+                DealerPrint("Dealer has Busted!");
+                this.Publish(bjd_action.paying);
+            }
+            if (dealerSum < sum) {
+                DealerPrint("Player Wins!");
+                player_status m = null;
+                for (player_status ps : this.dealer.players) {
+                    if (ps.uuid == p.uuid) {
+                        m = ps;
+                    }
+                }
+                if (m != null) {
+                    float pay = (float) 3 / 2 * (float) m.wager;
+                    this.credits -= pay;
+                    this.Publish(bjd_action.paying);
+                }
+
+            }
         }
     }
 
@@ -226,7 +308,7 @@ public class Dealer {
     }
 
     public void CheckSize() {
-        if (players.size() >= 6) {
+        if (players.size() >= MAX_PLAYERS.value) {
             System.out.println("Players full");
         }
     }
@@ -250,6 +332,9 @@ public class Dealer {
                 }
                 if (p.action == bjp_action.exiting) {
                     this.PlayerExiting(p);
+                }
+                if (p.action == bjp_action.none) {
+                    this.PlayerStay(p);
                 }
 
             }
