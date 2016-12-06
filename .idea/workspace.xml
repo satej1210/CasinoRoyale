@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98df0f42-e8ec-48c6-9c5b-a9b7155918c4" name="Default" comment="Broken Functionality">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Action.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/HelloWorldDataPublisher.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/HelloWorldDataSubscriber.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CR/CardAndDeck.class" afterPath="$PROJECT_DIR$/out/production/CR/CardAndDeck.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CR/CardFunctions.class" afterPath="$PROJECT_DIR$/out/production/CR/CardFunctions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CR/Dealer.class" afterPath="$PROJECT_DIR$/out/production/CR/Dealer.class" />
+    <list default="true" id="98df0f42-e8ec-48c6-9c5b-a9b7155918c4" name="Default" comment="Broken still &#10;cards work&#10;">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/GameManager.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CR/Player.class" afterPath="$PROJECT_DIR$/out/production/CR/Player.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ospl-error.log" afterPath="$PROJECT_DIR$/ospl-error.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ospl-info.log" afterPath="$PROJECT_DIR$/ospl-info.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CardAndDeck.java" afterPath="$PROJECT_DIR$/src/CardAndDeck.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CardFunctions.java" afterPath="$PROJECT_DIR$/src/CardFunctions.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dealer.java" afterPath="$PROJECT_DIR$/src/Dealer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.java" afterPath="$PROJECT_DIR$/src/Player.java" />
     </list>
     <ignored path="CR.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +34,8 @@
       <file leaf-file-name="CardFunctions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CardFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+            <state relative-caret-position="296">
+              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -49,8 +44,8 @@
       <file leaf-file-name="CardFunctionsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CardFunctionsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+            <state relative-caret-position="238">
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -59,25 +54,42 @@
       <file leaf-file-name="CardAndDeck.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CardAndDeck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+            <state relative-caret-position="170">
+              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
               <folding>
-                <element signature="e#198#199#0" expanded="true" />
-                <element signature="e#220#221#0" expanded="true" />
+                <element signature="e#200#201#0" expanded="true" />
+                <element signature="e#222#223#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="method#PublishInit#0;class#Player#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="353">
+              <caret line="214" column="52" selection-start-line="214" selection-start-column="52" selection-end-line="214" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Table.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Table.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bjPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/CR/bjPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -85,24 +97,21 @@
       <file leaf-file-name="Dealer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Dealer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-              <folding>
-                <element signature="method#Subscribe#0;class#Dealer#0" expanded="false" />
-                <element signature="method#AskBets#0;class#Dealer#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="319">
+              <caret line="293" column="28" selection-start-line="293" selection-start-column="20" selection-end-line="293" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="diag.uml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="diag.uml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/diag.uml">
           <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
               <ID>JAVA</ID>
               <OriginalElement />
               <nodes>
-                <node x="69.9537037037037" y="880.0">GameManager</node>
+                <node x="69.9537037037037" y="880.0">Snooper</node>
                 <node x="0.0" y="1330.0">CardFunctionsTest</node>
                 <node x="1274.4375" y="0.0">ErrorHandler</node>
                 <node x="446.22453703703707" y="488.5">Player</node>
@@ -116,50 +125,36 @@
               </nodes>
               <notes />
               <edges>
-                <edge source="GameManager" target="DDSEntityManager">
-                  <point x="173.33333333333337" y="-202.5" />
-                  <point x="503.28703703703707" y="855.0" />
-                  <point x="751.7245370370371" y="855.0" />
-                  <point x="751.7245370370371" y="430.0" />
-                  <point x="767.2708333333334" y="430.0" />
-                  <point x="176.33333333333337" y="202.5" />
-                </edge>
-                <edge source="GameManager" target="Table">
-                  <point x="0.0" y="-202.5" />
-                  <point x="329.9537037037037" y="855.0" />
-                  <point x="266.3171296296296" y="855.0" />
-                  <point x="34.75" y="26.0" />
-                </edge>
                 <edge source="Player" target="DDSEntityManager">
-                  <point x="0.0" y="-103.0" />
-                  <point x="593.7245370370371" y="430.0" />
-                  <point x="590.9375" y="430.0" />
-                  <point x="0.0" y="202.5" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Dealer" target="CardAndDeck">
-                  <point x="-115.125" y="-136.5" />
-                  <point x="116.44212962962962" y="430.0" />
-                  <point x="94.5" y="430.0" />
-                  <point x="0.0" y="48.5" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Snooper" target="DDSEntityManager">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Table" target="Dealer">
-                  <point x="0.0" y="-26.0" />
-                  <point x="0.0" y="136.5" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Snooper" target="Table">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Dealer" target="DDSEntityManager">
-                  <point x="115.125" y="-136.5" />
-                  <point x="346.6921296296296" y="430.0" />
-                  <point x="414.60416666666663" y="430.0" />
-                  <point x="-176.33333333333337" y="202.5" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="Dealer" target="PlayerCards">
-                  <point x="38.375" y="-136.5" />
-                  <point x="269.9421296296296" y="430.0" />
-                  <point x="281.0" y="430.0" />
-                  <point x="24.0" y="15.0" />
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.6161825726141079" x="763.0" y="713.0" />
+              <settings layout="Hierarchic Group" zoom="0.6161825726141079" x="-130.40404040404036" y="379.4949494949495" />
               <SelectedNodes />
               <Categories>
                 <Category>Fields</Category>
@@ -179,29 +174,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cardHolder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/CR/cardHolder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#159#160#0" expanded="false" />
-                <element signature="e#195#196#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bjDealer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/CR/bjDealer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -243,14 +215,14 @@
         <option value="$PROJECT_DIR$/src/Deale1r.java" />
         <option value="$PROJECT_DIR$/src/Table.java" />
         <option value="$PROJECT_DIR$/idl/cr.idl" />
-        <option value="$PROJECT_DIR$/src/GameManager.java" />
         <option value="$PROJECT_DIR$/etc/config/ospl.xml" />
         <option value="$PROJECT_DIR$/src/PlayerCards.java" />
-        <option value="$PROJECT_DIR$/src/Player.java" />
-        <option value="$PROJECT_DIR$/src/CardFunctions.java" />
         <option value="$PROJECT_DIR$/src/CardFunctionsTest.java" />
         <option value="$PROJECT_DIR$/src/CardAndDeck.java" />
+        <option value="$PROJECT_DIR$/src/GameManager.java" />
+        <option value="$PROJECT_DIR$/src/CardFunctions.java" />
         <option value="$PROJECT_DIR$/src/Dealer.java" />
+        <option value="$PROJECT_DIR$/src/Player.java" />
       </list>
     </option>
   </component>
@@ -376,84 +348,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="idl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="etc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="etc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="etc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1058,7 +952,7 @@
       <workItem from="1480553537574" duration="301000" />
       <workItem from="1480650514483" duration="440000" />
       <workItem from="1480709727108" duration="938000" />
-      <workItem from="1480908469911" duration="22714000" />
+      <workItem from="1480908469911" duration="30621000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Dealer&#10;Made Table class&#10;">
       <created>1479155099763</created>
@@ -1095,7 +989,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480985884623</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Broken still &#10;cards work&#10;">
+      <created>1480991109701</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1480991109701</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1122,7 +1023,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100490000" />
+    <option name="totallyTimeSpent" value="108397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1135,7 +1036,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.50416666" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.3562368" sideWeight="0.49583334" order="4" side_tool="false" content_ui="tabs" x="924" y="256" width="916" height="303" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.3562368" sideWeight="0.49583334" order="4" side_tool="false" content_ui="tabs" x="924" y="256" width="916" height="303" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1201,7 +1102,8 @@
     <MESSAGE value="Added new stuff" />
     <MESSAGE value="update" />
     <MESSAGE value="Broken Functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Broken Functionality" />
+    <MESSAGE value="Broken still &#10;cards work&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Broken still &#10;cards work&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1211,7 +1113,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="41" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1386,30 +1288,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Table.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#659#660#0" expanded="false" />
-            <element signature="e#683#684#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/etc/config/ospl.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8041">
-          <caret line="480" column="0" selection-start-line="480" selection-start-column="0" selection-end-line="480" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1549,14 +1431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/CR/bjPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CR/player_status.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1600,55 +1474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#PublishInit#0;class#Player#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CardFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CardFunctionsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CardAndDeck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding>
-            <element signature="e#198#199#0" expanded="true" />
-            <element signature="e#220#221#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dealer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <element signature="method#Subscribe#0;class#Dealer#0" expanded="false" />
-            <element signature="method#AskBets#0;class#Dealer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Action.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1663,7 +1488,7 @@
           <ID>JAVA</ID>
           <OriginalElement />
           <nodes>
-            <node x="69.9537037037037" y="880.0">GameManager</node>
+            <node x="69.9537037037037" y="880.0">Snooper</node>
             <node x="0.0" y="1330.0">CardFunctionsTest</node>
             <node x="1274.4375" y="0.0">ErrorHandler</node>
             <node x="446.22453703703707" y="488.5">Player</node>
@@ -1677,50 +1502,36 @@
           </nodes>
           <notes />
           <edges>
-            <edge source="GameManager" target="DDSEntityManager">
-              <point x="173.33333333333337" y="-202.5" />
-              <point x="503.28703703703707" y="855.0" />
-              <point x="751.7245370370371" y="855.0" />
-              <point x="751.7245370370371" y="430.0" />
-              <point x="767.2708333333334" y="430.0" />
-              <point x="176.33333333333337" y="202.5" />
-            </edge>
-            <edge source="GameManager" target="Table">
-              <point x="0.0" y="-202.5" />
-              <point x="329.9537037037037" y="855.0" />
-              <point x="266.3171296296296" y="855.0" />
-              <point x="34.75" y="26.0" />
-            </edge>
             <edge source="Player" target="DDSEntityManager">
-              <point x="0.0" y="-103.0" />
-              <point x="593.7245370370371" y="430.0" />
-              <point x="590.9375" y="430.0" />
-              <point x="0.0" y="202.5" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="Dealer" target="CardAndDeck">
-              <point x="-115.125" y="-136.5" />
-              <point x="116.44212962962962" y="430.0" />
-              <point x="94.5" y="430.0" />
-              <point x="0.0" y="48.5" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Snooper" target="DDSEntityManager">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="Table" target="Dealer">
-              <point x="0.0" y="-26.0" />
-              <point x="0.0" y="136.5" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Snooper" target="Table">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="Dealer" target="DDSEntityManager">
-              <point x="115.125" y="-136.5" />
-              <point x="346.6921296296296" y="430.0" />
-              <point x="414.60416666666663" y="430.0" />
-              <point x="-176.33333333333337" y="202.5" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
             <edge source="Dealer" target="PlayerCards">
-              <point x="38.375" y="-136.5" />
-              <point x="269.9421296296296" y="430.0" />
-              <point x="281.0" y="430.0" />
-              <point x="24.0" y="15.0" />
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.6161825726141079" x="763.0" y="713.0" />
+          <settings layout="Hierarchic Group" zoom="0.6161825726141079" x="-130.40404040404036" y="379.4949494949495" />
           <SelectedNodes />
           <Categories>
             <Category>Fields</Category>
@@ -1731,6 +1542,73 @@
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>public</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CardFunctionsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CardAndDeck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <folding>
+            <element signature="e#200#201#0" expanded="true" />
+            <element signature="e#222#223#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/CR/bjPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6575">
+          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CardFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dealer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="293" column="28" selection-start-line="293" selection-start-column="20" selection-end-line="293" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="214" column="52" selection-start-line="214" selection-start-column="52" selection-end-line="214" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>

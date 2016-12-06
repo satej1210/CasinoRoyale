@@ -41,7 +41,7 @@ public class Dealer {
         Dealer d = new Dealer();
         d.dealer.action = bjd_action.shuffling;
         d.Publish(bjd_action.waiting);
-        d.SubscribeToPlayer();
+        d.Subscribe();
 
 //        CardFunctions.PrintDeck(d.cards);
         card c;
@@ -99,7 +99,7 @@ public class Dealer {
         int status = dealerWriter.write(d, HANDLE_NIL.value);
         ErrorHandler.checkStatus(status, "MsgDataWriter.write");
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -115,9 +115,20 @@ public class Dealer {
 
     public void DealToSelf() {
         CardAndDeck cd = new CardAndDeck(cards);
+        card c = new card();
+
         CardFunctions.PickCard(cd);
-        dealerCards.add(cd.card);
+
         CardFunctions.PrintCard(cd.card);
+        c.visible = cd.card.visible;
+        c.suite = cd.card.suite;
+        c.base_value = cd.card.base_value;
+        dealerCards.add(c);
+        int sum = 0;
+        for (card d : dealerCards) {
+            sum += CardFunctions.GetValue(d.base_value);
+        }
+        //if (sum >)
     }
 
     public void DealCards(bjPlayer p) {
@@ -134,6 +145,7 @@ public class Dealer {
         CardAndDeck cd = new CardAndDeck(cards);
         CardFunctions.PickCard(cd);
         CardFunctions.PrintCard(cd.card);
+        cards = cd.c;
         this.dealer.cards[0] = cd.card;
         this.dealer.cards[0].visible = false;
         l.playerCards.add(this.dealer.cards[0]);
@@ -166,7 +178,7 @@ public class Dealer {
 
     }
 
-    public void SubscribeToPlayer() {
+    public void Subscribe() {
         Runnable b = () -> {
             DDSEntityManager mgr = new DDSEntityManager();
 
@@ -207,6 +219,7 @@ public class Dealer {
                 for (int i = 0; i < msgSeq.value.length; i++) {
                     bjPlayer p = msgSeq.value[i];
                     if (p.getClass() == bjPlayer.class) {//.message.equals("Hello World")) {
+                        this.dealer.target_uuid = p.uuid;
                         if (p.action == bjp_action.joining) {
                             System.out.println("=== [DealerSubscriber] Player message: joining :");
                             for (player_status a : this.dealer.players) {
@@ -217,10 +230,10 @@ public class Dealer {
                                 }
                             }
 
-                            if (!flag && playerCount < 4) {
-                                this.dealer.players[++playerCount].uuid = p.uuid;
-                                this.dealer.players[++playerCount].wager = p.wager;
-                                this.dealer.target_uuid = p.uuid;
+                            if (!flag && playerCount + 1 < 6) {
+                                this.dealer.players[playerCount].uuid = p.uuid;
+                                this.dealer.players[playerCount++].wager = p.wager;
+
 //                            this.Publish(bjd_action.waiting);
                                 this.Publish(bjd_action.collecting);
                             }
@@ -234,13 +247,50 @@ public class Dealer {
                         if (p.action == bjp_action.requesting_a_card) {
                             this.DealCards(p);
                         }
+                        if (p.action == bjp_action.exiting) {
+                            PlayerCards t = null;
+                            for (PlayerCards e : players) {
+                                if (p.uuid == e.uuid) {
+                                    t = e;
+                                }
+                            }
+                            if (t == null) {
+                                DealerPrint("Unknown Player Exiting");
+                            } else {
+                                int sum = 0;
+                                int aceExists = 0;
+                                for (card c : t.playerCards) {
+                                    if (c.base_value == 'A') {
+                                        aceExists++;
+                                    }
+                                    sum += CardFunctions.GetValue(c.base_value);
+                                }
+                                if (sum > 21) {
+                                    while (aceExists != 0) {
+                                        sum -= 10;
+                                        aceExists--;
+                                        if (sum == 21) {
+                                            DealerPrint("BLACKJACK!");
+                                            break;
+                                        }
+                                    }
+                                    if (sum > 21) {
+                                        DealerPrint("Player has busted!");
+                                        t.playerCards = null;
+                                    }
+                                }
+                                if (sum == 21) {
+                                    DealerPrint("BLACKJACK!");
+                                }
+                            }
+                        }
 
                     }
 
 
                 }
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException ie) {
                     // nothing to do
                 }
@@ -258,120 +308,6 @@ public class Dealer {
         Thread t = new Thread(b);
         t.start();
 
-    }
-
-    public void Subscribe() {
-        DDSEntityManager mgr = new DDSEntityManager();
-        String partitionName = "CR";
-
-        // create Domain Participant
-        mgr.createParticipant(partitionName);
-
-        // create Type
-        bjPlayerTypeSupport msgTS = new bjPlayerTypeSupport();
-        mgr.registerType(msgTS);
-
-        // create Topic
-        mgr.createTopic("Player");
-
-        // create Subscriber
-        mgr.createSubscriber();
-
-        // create DataReader
-        mgr.createReader();
-
-        // Read Events
-
-        DataReader dreader = mgr.getReader();
-        bjPlayerDataReader playerReader = bjPlayerDataReaderHelper.narrow(dreader);
-
-        bjPlayerSeqHolder msgSeq = new bjPlayerSeqHolder();
-        SampleInfoSeqHolder infoSeq = new SampleInfoSeqHolder();
-
-        System.out.println("=== [Subscriber] Ready ...");
-        boolean terminate = false;
-        int count = 0;
-        while (!terminate) { // We dont want the example to run indefinitely
-            playerReader.take(msgSeq, infoSeq, LENGTH_UNLIMITED.value,
-                    ANY_SAMPLE_STATE.value, ANY_VIEW_STATE.value,
-                    ANY_INSTANCE_STATE.value);
-            for (int i = 0; i < msgSeq.value.length; i++) {
-                if (msgSeq.value[i].getClass() == bjPlayer.class && msgSeq.value[i].dealer_id == this.dealer.uuid) {//.message.equals("Hello World")) {
-                    System.out.println("=== [DealerSubscriber] message received :");
-                    player_status p = null;
-                    for (player_status ps : this.dealer.players) {
-                        if (ps.uuid == msgSeq.value[i].uuid) {
-                            ps.wager = msgSeq.value[i].wager;
-                            System.out.println(" === Player with uuid " + ps.uuid + " set bet of " + ps.wager);
-                            break;
-                        }
-                    }
-                }
-                terminate = true;
-            }
-            try {
-                Thread.sleep(200);
-            } catch (InterruptedException ie) {
-                // nothing to do
-            }
-            ++count;
-
-        }
-        playerReader.return_loan(msgSeq, infoSeq);
-
-        // clean up
-        mgr.getSubscriber().delete_datareader(playerReader);
-        mgr.deleteSubscriber();
-        mgr.deleteTopic();
-        mgr.deleteParticipant();
-
-    }
-
-    public void AskBets() {
-        DDSEntityManager mgr = new DDSEntityManager();
-        String partitionName = "Casino Royale";
-
-        // create Domain Participant
-        mgr.createParticipant(partitionName);
-
-        // create Type
-        bjDealerTypeSupport msgTS = new bjDealerTypeSupport();
-        mgr.registerType(msgTS);
-
-        // create Topic
-        mgr.createTopic("Dealer");
-
-        // create Publisher
-        mgr.createPublisher();
-
-        // create DataWriter
-        mgr.createWriter();
-
-        // Publish Events
-
-        DataWriter dwriter = mgr.getWriter();
-        bjDealerDataWriter HelloWorldWriter = bjDealerDataWriterHelper.narrow(dwriter);
-        bjDealer msgInstance = new bjDealer();
-        msgInstance.uuid = this.dealer.uuid;
-        msgInstance.seqno = this.dealer.seqno;
-        msgInstance.action = bjd_action.collecting;
-        msgInstance.active_players = this.dealer.active_players;
-
-        msgInstance.target_uuid = this.dealer.target_uuid;
-        System.out.println("==1de= [DealerPublisher] is asking for bets :");
-        HelloWorldWriter.register_instance(msgInstance);
-        int status = HelloWorldWriter.write(msgInstance, HANDLE_NIL.value);
-        ErrorHandler.checkStatus(status, "MsgDataWriter.write");
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        // clean up
-        mgr.getPublisher().delete_datawriter(HelloWorldWriter);
-        mgr.deletePublisher();
-        mgr.deleteTopic();
-        mgr.deleteParticipant();
     }
 
     @Override

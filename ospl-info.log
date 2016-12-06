@@ -56318,3 +56318,2544 @@ Node        : Asus-PC
 Process     : java.exe <18608>
 Thread      : 16848
 Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1480988599.039552386
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:07:52 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <21456>
+Thread      : spliced 14464
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481000872.027580934
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:07:52 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <21456>
+Thread      : spliced 14464
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481000872.070353921
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:07:52 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <21456>
+Thread      : spliced 14464
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481000872.072285629
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:07:52 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <21456>
+Thread      : spliced 14464
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481000872.075498157
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:07:52 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <21456>
+Thread      : ddsi2 14984
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481000872.254523494
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:07:52 Central Standard Time 2016
+Description : The durability service can by identified by ID: 7426956
+Node        : Asus-PC
+Process     : java.exe <21456>
+Thread      : durability 3984
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481000872.283145446
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:07:56 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <21456>
+Thread      : 12692
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481000876.788771434
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:07:59 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <21456>
+Thread      : durability 3984
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481000879.301352341
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:08:03 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <11192>
+Thread      : spliced 16984
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481000883.185184243
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:08:03 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <11192>
+Thread      : spliced 16984
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481000883.206603666
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:08:03 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <11192>
+Thread      : spliced 16984
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481000883.207907152
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:08:03 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <11192>
+Thread      : spliced 16984
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481000883.210040712
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:08:03 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <11192>
+Thread      : ddsi2 19592
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481000883.259725853
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:08:03 Central Standard Time 2016
+Description : The durability service can by identified by ID: 105934902
+Node        : Asus-PC
+Process     : java.exe <11192>
+Thread      : durability 16612
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481000883.358576963
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:08:05 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <21456>
+Thread      : 12692
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481000885.871550494
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:08:10 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <11192>
+Thread      : durability 16612
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481000890.884599000
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:08:12 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <21456>
+Thread      : 12692
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481000892.094409396
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:08:26 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <21456>
+Thread      : 12692
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481000906.465886659
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:08:49 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <21456>
+Thread      : 12692
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481000929.369813581
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:09:18 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <12240>
+Thread      : spliced 9936
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481000958.786507957
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:09:18 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <12240>
+Thread      : spliced 9936
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481000958.819183204
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:09:18 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <12240>
+Thread      : spliced 9936
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481000958.820815127
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:09:18 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <12240>
+Thread      : spliced 9936
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481000958.823266861
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:09:18 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <12240>
+Thread      : ddsi2 5312
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481000958.883888797
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:09:18 Central Standard Time 2016
+Description : The durability service can by identified by ID: 1914749469
+Node        : Asus-PC
+Process     : java.exe <12240>
+Thread      : durability 2664
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481000958.977944636
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:09:23 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <12240>
+Thread      : 13456
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481000963.543034902
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:09:23 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <17528>
+Thread      : spliced 6904
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481000963.715401463
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:09:23 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <17528>
+Thread      : spliced 6904
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481000963.735432724
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:09:23 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <17528>
+Thread      : spliced 6904
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481000963.736581828
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:09:23 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <17528>
+Thread      : spliced 6904
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481000963.738547320
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:09:23 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <17528>
+Thread      : ddsi2 19356
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481000963.786328123
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:09:23 Central Standard Time 2016
+Description : The durability service can by identified by ID: 325122263
+Node        : Asus-PC
+Process     : java.exe <17528>
+Thread      : durability 17276
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481000963.882143753
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:09:25 Central Standard Time 2016
+Description : thread tev failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <17528>
+Thread      : lease 7828
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481000965.746317773
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:09:25 Central Standard Time 2016
+Description : thread xmit.user failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <17528>
+Thread      : lease 7828
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481000965.746996031
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:09:26 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <12240>
+Thread      : durability 2664
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481000966.009335641
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:09:28 Central Standard Time 2016
+Description : thread tev once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <17528>
+Thread      : lease 7828
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481000968.749776202
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:09:28 Central Standard Time 2016
+Description : thread xmit.user once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <17528>
+Thread      : lease 7828
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481000968.750246193
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:09:29 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <12240>
+Thread      : 13456
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481000969.583571265
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:09:32 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <17528>
+Thread      : durability 17276
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481000972.920253185
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:09:35 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <12240>
+Thread      : 13456
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481000975.799951226
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:09:50 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <12240>
+Thread      : 13456
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481000990.389592617
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:11:42 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <11104>
+Thread      : spliced 14168
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481001102.280672710
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:11:42 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <11104>
+Thread      : spliced 14168
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481001102.312902770
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:11:42 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <11104>
+Thread      : spliced 14168
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481001102.314560781
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:11:42 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <11104>
+Thread      : spliced 14168
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001102.317206242
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:11:42 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <11104>
+Thread      : ddsi2 2544
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001102.375686919
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:11:42 Central Standard Time 2016
+Description : The durability service can by identified by ID: 1215754845
+Node        : Asus-PC
+Process     : java.exe <11104>
+Thread      : durability 20488
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481001102.467378265
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:11:47 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <18400>
+Thread      : spliced 6544
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481001107.051398980
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:11:47 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <11104>
+Thread      : 13992
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001107.071848521
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:11:47 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <18400>
+Thread      : spliced 6544
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481001107.079798981
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:11:47 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <18400>
+Thread      : spliced 6544
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481001107.081120856
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:11:47 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <18400>
+Thread      : spliced 6544
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001107.083211224
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:11:47 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <18400>
+Thread      : ddsi2 17216
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001107.134293934
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:11:47 Central Standard Time 2016
+Description : The durability service can by identified by ID: 276769572
+Node        : Asus-PC
+Process     : java.exe <18400>
+Thread      : durability 15992
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481001107.232164864
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:11:49 Central Standard Time 2016
+Description : thread tev failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <18400>
+Thread      : lease 12208
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001109.089244978
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:11:49 Central Standard Time 2016
+Description : thread xmit.user failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <18400>
+Thread      : lease 12208
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001109.089922808
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:11:49 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <11104>
+Thread      : durability 20488
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001109.500471756
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:11:57 Central Standard Time 2016
+Description : thread tev once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <18400>
+Thread      : lease 12208
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001117.093732768
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:11:57 Central Standard Time 2016
+Description : thread xmit.user once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <18400>
+Thread      : lease 12208
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001117.094221575
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:11:58 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <18400>
+Thread      : durability 15992
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001118.285335803
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:12:23 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <19032>
+Thread      : spliced 12916
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481001143.691898408
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:12:23 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <19032>
+Thread      : spliced 12916
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481001143.718716949
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:12:23 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <19032>
+Thread      : spliced 12916
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481001143.720519078
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:12:23 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <19032>
+Thread      : spliced 12916
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001143.722603886
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:12:23 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <19032>
+Thread      : ddsi2 9976
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001143.770620325
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:12:23 Central Standard Time 2016
+Description : The durability service can by identified by ID: 1920314800
+Node        : Asus-PC
+Process     : java.exe <19032>
+Thread      : durability 12328
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481001143.880011369
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:12:28 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <19032>
+Thread      : 16944
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001148.613689675
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:12:28 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <5032>
+Thread      : spliced 11272
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481001148.618213499
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:12:28 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <5032>
+Thread      : spliced 11272
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481001148.646217921
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:12:28 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <5032>
+Thread      : spliced 11272
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481001148.647663815
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:12:28 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <5032>
+Thread      : spliced 11272
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001148.650523530
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:12:28 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <5032>
+Thread      : ddsi2 19300
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001148.699555645
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:12:28 Central Standard Time 2016
+Description : The durability service can by identified by ID: 1777796061
+Node        : Asus-PC
+Process     : java.exe <5032>
+Thread      : durability 17932
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481001148.795359728
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:12:30 Central Standard Time 2016
+Description : thread tev failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <5032>
+Thread      : lease 5488
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001150.661250348
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:12:30 Central Standard Time 2016
+Description : thread xmit.user failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <5032>
+Thread      : lease 5488
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001150.661929460
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:12:30 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <19032>
+Thread      : durability 12328
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001150.962691213
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:12:31 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <19032>
+Thread      : 16944
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001151.655452546
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:12:31 Central Standard Time 2016
+Description : thread tev once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <5032>
+Thread      : lease 5488
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001151.662661174
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:12:31 Central Standard Time 2016
+Description : thread xmit.user once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <5032>
+Thread      : lease 5488
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001151.663393744
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:12:37 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <5032>
+Thread      : durability 17932
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001157.836910056
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:12:37 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <19032>
+Thread      : 16944
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001157.879217217
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:12:48 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <19032>
+Thread      : 16944
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001168.312492889
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:13:14 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <16436>
+Thread      : spliced 11704
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481001194.857513978
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:13:14 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <16436>
+Thread      : spliced 11704
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481001194.885056108
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:13:14 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <16436>
+Thread      : spliced 11704
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481001194.887832002
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:13:14 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <16436>
+Thread      : spliced 11704
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001194.894574378
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:13:14 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <16436>
+Thread      : ddsi2 2344
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001194.969666804
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:13:15 Central Standard Time 2016
+Description : The durability service can by identified by ID: 1944974141
+Node        : Asus-PC
+Process     : java.exe <16436>
+Thread      : durability 13956
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481001195.054883058
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:13:19 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : spliced 13260
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481001199.444059028
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:13:19 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : spliced 13260
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481001199.466422709
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:13:19 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : spliced 13260
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481001199.468076442
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:13:19 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : spliced 13260
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001199.471114489
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:13:19 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : ddsi2 7096
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001199.530855032
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:13:19 Central Standard Time 2016
+Description : The durability service can by identified by ID: 130955757
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : durability 20336
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481001199.631674201
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:13:19 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <16436>
+Thread      : 21308
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001199.685079628
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:13:21 Central Standard Time 2016
+Description : thread tev failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001201.481491914
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:13:21 Central Standard Time 2016
+Description : thread xmit.user failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001201.481958911
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:13:22 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <16436>
+Thread      : durability 13956
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001202.077760349
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:13:30 Central Standard Time 2016
+Description : Service 'ddsi2' DIED -> skip
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : ServiceManager 18884
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/serviceMonitor.c/271/0/1481001210.480717862
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:13:30 Central Standard Time 2016
+Description : thread tev once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001210.486162739
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:13:30 Central Standard Time 2016
+Description : thread xmit.user once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001210.486637006
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:13:31 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : durability 20336
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001211.699420833
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:13:31 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <16436>
+Thread      : 21308
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001211.735277952
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:13:37 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <16436>
+Thread      : 21308
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001217.953379216
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:15:42 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <16436>
+Thread      : 21308
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001342.546931066
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:16:45 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : spliced 12428
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481001405.934023711
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:16:45 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : spliced 12428
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481001405.966049780
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:16:45 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : spliced 12428
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481001405.968344566
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:16:45 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : spliced 12428
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001405.971820956
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:16:46 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : ddsi2 9936
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001406.028272848
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:16:46 Central Standard Time 2016
+Description : The durability service can by identified by ID: 766421389
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : durability 13612
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481001406.124224900
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:47 Central Standard Time 2016
+Description : Missed heartbeat for node - heartbeat id : 1944974141. (DCPSPublication state 1)
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : OSPL Garbage Collector 11064
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_spliced/v_spliced.c/2439/0/1481001407.483287628
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:47 Central Standard Time 2016
+Description : thread tev failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : lease 13844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001407.982248844
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:47 Central Standard Time 2016
+Description : thread xmit.user failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : lease 13844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001407.982744922
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:48 Central Standard Time 2016
+Description : thread xmit.user once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : lease 13844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001408.982518266
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:49 Central Standard Time 2016
+Description : thread tev once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : lease 13844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001409.983953896
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:50 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : 3468
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001410.741521321
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:16:50 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <20568>
+Thread      : spliced 18540
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481001410.916726314
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:16:50 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <20568>
+Thread      : spliced 18540
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481001410.936657505
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:16:50 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <20568>
+Thread      : spliced 18540
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481001410.938098268
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:16:50 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <20568>
+Thread      : spliced 18540
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001410.940124059
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:16:50 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <20568>
+Thread      : ddsi2 4772
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001410.990526802
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:16:51 Central Standard Time 2016
+Description : The durability service can by identified by ID: 22866578
+Node        : Asus-PC
+Process     : java.exe <20568>
+Thread      : durability 14112
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481001411.082616720
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:52 Central Standard Time 2016
+Description : thread tev failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <20568>
+Thread      : lease 5988
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001412.947867570
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:52 Central Standard Time 2016
+Description : thread xmit.user failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <20568>
+Thread      : lease 5988
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001412.948499214
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:54 Central Standard Time 2016
+Description : thread tev once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <20568>
+Thread      : lease 5988
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001414.949545680
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:54 Central Standard Time 2016
+Description : thread xmit.user once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <20568>
+Thread      : lease 5988
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001414.950031922
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:55 Central Standard Time 2016
+Description : thread tev failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001415.588713047
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:55 Central Standard Time 2016
+Description : thread xmit.user failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001415.589374198
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:56 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : 3468
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001416.790461918
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:58 Central Standard Time 2016
+Description : thread tev once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001418.590379610
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:58 Central Standard Time 2016
+Description : thread xmit.user once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001418.590836343
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:59 Central Standard Time 2016
+Description : thread tev failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001419.591817807
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:16:59 Central Standard Time 2016
+Description : thread xmit.user failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001419.592294212
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:17:02 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : durability 13612
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001422.310619979
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:03 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : 3468
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001423.016588944
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:03 Central Standard Time 2016
+Description : thread tev once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001423.593288932
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:03 Central Standard Time 2016
+Description : thread xmit.user once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001423.593761917
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:05 Central Standard Time 2016
+Description : thread tev failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : lease 13844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001425.994487842
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:05 Central Standard Time 2016
+Description : thread xmit.user failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : lease 13844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001425.995318344
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:08 Central Standard Time 2016
+Description : thread tev failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001428.595292059
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:08 Central Standard Time 2016
+Description : thread xmit.user failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001428.595758628
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:10 Central Standard Time 2016
+Description : thread tev once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : lease 13844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001430.998613410
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:10 Central Standard Time 2016
+Description : thread xmit.user once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : lease 13844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001430.998766510
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:11 Central Standard Time 2016
+Description : thread tev once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001431.597134815
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:11 Central Standard Time 2016
+Description : thread xmit.user once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001431.597305448
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:12 Central Standard Time 2016
+Description : writer 7ce39ed:5b:1:902 considering reader 73edf33d:5b:1:1107 non-responsive
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : xmit.user 14096
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_transmit.c/787/0/1481001432.448184168
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:12 Central Standard Time 2016
+Description : thread tev failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : lease 13844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001432.999583327
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:12 Central Standard Time 2016
+Description : thread xmit.user failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : lease 13844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001432.999724024
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:13 Central Standard Time 2016
+Description : thread xmit.user failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001433.598279214
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:14 Central Standard Time 2016
+Description : thread tev failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001434.599117414
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:15 Central Standard Time 2016
+Description : thread tev once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : lease 13844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001435.000829079
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:15 Central Standard Time 2016
+Description : thread xmit.user once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : lease 13844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001435.000963362
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:17:15 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <20568>
+Thread      : durability 14112
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001435.499068954
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:16 Central Standard Time 2016
+Description : thread tev once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001436.599826035
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:16 Central Standard Time 2016
+Description : thread xmit.user once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <12596>
+Thread      : lease 5624
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001436.599971009
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:17:17 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : 3468
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001437.134837962
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:18:30 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <13716>
+Thread      : 3468
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001510.714970491
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:22:56 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <13240>
+Thread      : spliced 7064
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481001776.803018002
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:22:56 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <13240>
+Thread      : spliced 7064
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481001776.834772084
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:22:56 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <13240>
+Thread      : spliced 7064
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481001776.836196596
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:22:56 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <13240>
+Thread      : spliced 7064
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001776.838209130
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:22:56 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <13240>
+Thread      : ddsi2 10256
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001776.893602154
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:22:56 Central Standard Time 2016
+Description : The durability service can by identified by ID: 1048676332
+Node        : Asus-PC
+Process     : java.exe <13240>
+Thread      : durability 11756
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481001776.985704474
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:23:01 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <13240>
+Thread      : 20172
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001781.719156125
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:23:04 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <13240>
+Thread      : durability 11756
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001784.058587646
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:23:05 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <21036>
+Thread      : spliced 440
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481001785.678494787
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:23:05 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <21036>
+Thread      : spliced 440
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481001785.706283672
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:23:05 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <21036>
+Thread      : spliced 440
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481001785.707675255
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:23:05 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <21036>
+Thread      : spliced 440
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001785.709403828
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:23:05 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <21036>
+Thread      : ddsi2 13752
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001785.763052883
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:23:05 Central Standard Time 2016
+Description : The durability service can by identified by ID: 1400572499
+Node        : Asus-PC
+Process     : java.exe <21036>
+Thread      : durability 6892
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481001785.856314143
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:23:07 Central Standard Time 2016
+Description : thread tev failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <21036>
+Thread      : lease 18716
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001787.719594369
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:23:07 Central Standard Time 2016
+Description : thread xmit.user failed to make progress
+
+Node        : Asus-PC
+Process     : java.exe <21036>
+Thread      : lease 18716
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001787.720327366
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:23:12 Central Standard Time 2016
+Description : thread tev once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <21036>
+Thread      : lease 18716
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001792.723906820
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:23:12 Central Standard Time 2016
+Description : thread xmit.user once again made progress
+
+Node        : Asus-PC
+Process     : java.exe <21036>
+Thread      : lease 18716
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/ddsi2/q_servicelease.c/108/0/1481001792.724519647
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:23:13 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <13240>
+Thread      : 20172
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001793.766097444
+========================================================================================
+Report      : INFO
+Date        : Mon Dec 05 23:23:16 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <21036>
+Thread      : durability 6892
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481001796.411813866
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:23:19 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <13240>
+Thread      : 20172
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001799.984628927
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:23:29 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <13240>
+Thread      : 20172
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001809.360525983
+========================================================================================
+Report      : WARNING
+Date        : Mon Dec 05 23:23:39 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <13240>
+Thread      : 20172
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481001819.805733597
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:05:40 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <18668>
+Thread      : spliced 20000
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481004340.208452942
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:05:40 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <18668>
+Thread      : spliced 20000
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481004340.239552715
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:05:40 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <18668>
+Thread      : spliced 20000
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481004340.243591041
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:05:40 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <18668>
+Thread      : spliced 20000
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481004340.249001278
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:05:40 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <18668>
+Thread      : ddsi2 3956
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481004340.306931139
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:05:40 Central Standard Time 2016
+Description : The durability service can by identified by ID: 1445974644
+Node        : Asus-PC
+Process     : java.exe <18668>
+Thread      : durability 20780
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481004340.400174865
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:05:44 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <18668>
+Thread      : 13488
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481004344.969744795
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:05:45 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <4092>
+Thread      : spliced 20572
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481004345.183644192
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:05:45 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <4092>
+Thread      : spliced 20572
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481004345.213651740
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:05:45 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <4092>
+Thread      : spliced 20572
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481004345.215352088
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:05:45 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <4092>
+Thread      : spliced 20572
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481004345.218034755
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:05:45 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <4092>
+Thread      : ddsi2 10500
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481004345.269055455
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:05:45 Central Standard Time 2016
+Description : The durability service can by identified by ID: 517437152
+Node        : Asus-PC
+Process     : java.exe <4092>
+Thread      : durability 19648
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481004345.362196544
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:05:48 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <18668>
+Thread      : 13488
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481004348.011119785
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:05:52 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <18668>
+Thread      : durability 20780
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481004352.748947180
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:05:55 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <4092>
+Thread      : durability 19648
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481004355.311581259
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:05:57 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <18668>
+Thread      : 13488
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481004357.234048395
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:06:17 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <18668>
+Thread      : 13488
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481004377.636101129
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:06:23 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <18668>
+Thread      : 13488
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481004383.860336646
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:17:22 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <15556>
+Thread      : spliced 2084
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481005042.915158507
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:17:22 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <15556>
+Thread      : spliced 2084
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481005042.950572015
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:17:22 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <15556>
+Thread      : spliced 2084
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481005042.952522968
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:17:22 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <15556>
+Thread      : spliced 2084
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481005042.956462934
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:17:23 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <15556>
+Thread      : ddsi2 19384
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481005043.024225390
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:17:23 Central Standard Time 2016
+Description : The durability service can by identified by ID: 1912443796
+Node        : Asus-PC
+Process     : java.exe <15556>
+Thread      : durability 17752
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481005043.120319850
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:17:27 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <15556>
+Thread      : 7596
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481005047.707624546
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:17:27 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <20556>
+Thread      : spliced 18200
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481005047.923247698
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:17:27 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <20556>
+Thread      : spliced 18200
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481005047.946689491
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:17:27 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <20556>
+Thread      : spliced 18200
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481005047.948248286
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:17:27 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <20556>
+Thread      : spliced 18200
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481005047.950523827
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:17:28 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <20556>
+Thread      : ddsi2 12160
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481005048.003249580
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:17:28 Central Standard Time 2016
+Description : The durability service can by identified by ID: 1310522458
+Node        : Asus-PC
+Process     : java.exe <20556>
+Thread      : durability 19352
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481005048.099732776
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:17:30 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <15556>
+Thread      : 7596
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481005050.752317267
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:17:35 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <15556>
+Thread      : durability 17752
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481005055.486157226
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:17:38 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <20556>
+Thread      : durability 19352
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481005058.044477884
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:17:39 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <15556>
+Thread      : 7596
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481005059.977630041
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:17:49 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <15556>
+Thread      : 7596
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481005069.798324592
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:18:08 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <15556>
+Thread      : 7596
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481005088.254809842
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:24:02 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <1200>
+Thread      : spliced 7564
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481005442.577703339
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:24:02 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <1200>
+Thread      : spliced 7564
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481005442.598188768
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:24:02 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <1200>
+Thread      : spliced 7564
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481005442.599640222
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:24:02 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <1200>
+Thread      : spliced 7564
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481005442.601659598
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:24:02 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <1200>
+Thread      : ddsi2 7092
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481005442.652539601
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:24:02 Central Standard Time 2016
+Description : The durability service can by identified by ID: 463602467
+Node        : Asus-PC
+Process     : java.exe <1200>
+Thread      : durability 9416
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481005442.748321447
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:24:07 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <14004>
+Thread      : spliced 13608
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481005447.237699447
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:24:07 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <14004>
+Thread      : spliced 13608
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481005447.260779446
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:24:07 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <14004>
+Thread      : spliced 13608
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481005447.262572595
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:24:07 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <14004>
+Thread      : spliced 13608
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481005447.268586250
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:24:07 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <14004>
+Thread      : ddsi2 17904
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481005447.324448409
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:24:07 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <1200>
+Thread      : 16144
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481005447.337294845
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:24:07 Central Standard Time 2016
+Description : The durability service can by identified by ID: 1120754711
+Node        : Asus-PC
+Process     : java.exe <14004>
+Thread      : durability 10232
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481005447.417042957
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:24:10 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <1200>
+Thread      : 16144
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481005450.375227229
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:24:14 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <1200>
+Thread      : durability 9416
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481005454.800551550
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:24:17 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <14004>
+Thread      : durability 10232
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481005457.359122505
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:24:19 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <1200>
+Thread      : 16144
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481005459.596473024
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:42:03 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : spliced 15844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481006523.316230934
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:42:03 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : spliced 15844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481006523.381496325
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:42:03 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : spliced 15844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481006523.383869371
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:42:03 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : spliced 15844
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481006523.391102692
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:42:03 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : ddsi2 15068
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481006523.453620840
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:42:03 Central Standard Time 2016
+Description : The durability service can by identified by ID: 957806468
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : durability 16012
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481006523.555674216
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:42:06 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : 15136
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481006526.177100481
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:42:10 Central Standard Time 2016
+Description : u_domainNew:Database allocated on heap
+Node        : Asus-PC
+Process     : java.exe <10396>
+Thread      : spliced 16940
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/user::u_domain::u_domainNew/u_domain.c/706/0/1481006530.089070584
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:42:10 Central Standard Time 2016
+Description : ---------------------------------------------------------------
+              -- The service is using the following configuration settings --
+              ---------------------------------------------------------------
+              Domain (id)          : ospl_sp_ddsi (0)
+              Storage              : 10240 Kbytes
+              Storage threshold    : 1024 Kbytes
+              Storage address      : Not available
+              Locking              : default
+              Memory mode          : Heap memory
+              Builtin topics       : true
+              Priority inheritance : false
+Node        : Asus-PC
+Process     : java.exe <10396>
+Thread      : spliced 16940
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/The OpenSplice domain service/u_domain.c/827/0/1481006530.130590975
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:42:10 Central Standard Time 2016
+Description : Service cmsoap disabled
+Node        : Asus-PC
+Process     : java.exe <10396>
+Thread      : spliced 16940
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/OpenSplice domain service/sr_componentInfo.c/439/0/1481006530.132837436
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:42:10 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'splicedaemon' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <10396>
+Thread      : spliced 16940
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481006530.136391659
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:42:10 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'ddsi2' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <10396>
+Thread      : ddsi2 15432
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481006530.217774432
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:42:10 Central Standard Time 2016
+Description : The durability service can by identified by ID: 577001286
+Node        : Asus-PC
+Process     : java.exe <10396>
+Thread      : durability 20992
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/DurabilityService/d_durability.c/476/0/1481006530.307389095
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:42:12 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : 15136
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481006532.232501630
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:42:17 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : durability 16012
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481006537.805334980
+========================================================================================
+Report      : INFO
+Date        : Tue Dec 06 00:42:20 Central Standard Time 2016
+Description : ++++++++++++++++++++++++++++++++++++++++++++++++
+              ++ The service 'durability' is now operational. 
+              ++++++++++++++++++++++++++++++++++++++++++++++++
+Node        : Asus-PC
+Process     : java.exe <10396>
+Thread      : durability 20992
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_serviceChangeState/v_service.c/329/0/1481006540.326255430
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:42:21 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : 15136
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481006541.370379060
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:42:54 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : 15136
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481006574.735554858
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:43:06 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : 15136
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481006586.224741441
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:43:14 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : 15136
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481006594.076453228
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:43:19 Central Standard Time 2016
+Description : The main class name could not be resolved
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : 15136
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/dcpssaj/saj_domainParticipantFactory.c/145/0/1481006599.197040652
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:48:18 Central Standard Time 2016
+Description : Processing of lease 0x120eec0 is behind schedule; expiry-time=1481006839.485185900s and lag=59.275392639s (actionId=1 and duration=10.000000000s). Assuming resuming after hibernate...
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : watchdog 10104
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_leaseManager/v_leaseManager.c/775/0/1481006898.760603343
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:48:18 Central Standard Time 2016
+Description : Processing of lease 0x121c600 is behind schedule; expiry-time=1481006840.570997446s and lag=58.189581093s (actionId=1 and duration=10.000000000s). Assuming resuming after hibernate...
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : watchdog 10104
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_leaseManager/v_leaseManager.c/775/0/1481006898.760929214
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:48:18 Central Standard Time 2016
+Description : Processing of lease 0x121c790 is behind schedule; expiry-time=1481006839.626940432s and lag=59.133638107s (actionId=1 and duration=10.000000000s). Assuming resuming after hibernate...
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : watchdog 10104
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_leaseManager/v_leaseManager.c/775/0/1481006898.761094716
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:48:18 Central Standard Time 2016
+Description : Processing of lease 0x121bf20 is behind schedule; expiry-time=1481006831.400394306s and lag=67.360184233s (actionId=6 and duration=2.000000000s). This is often an indication that the machine is too busy. The lease manager will continue to function normally.
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : watchdog 10104
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_leaseManager/v_leaseManager.c/795/0/1481006898.761406047
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:48:18 Central Standard Time 2016
+Description : Processing of lease 0x121bbb0 is behind schedule; expiry-time=1481006831.400300223s and lag=67.360278316s (actionId=5 and duration=2.000000000s). This is often an indication that the machine is too busy. The lease manager will continue to function normally.
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : watchdog 10104
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_leaseManager/v_leaseManager.c/795/0/1481006898.761594215
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:48:18 Central Standard Time 2016
+Description : Missed heartbeat for node - heartbeat id : 577001286. (DCPSPublication state 1)
+Node        : Asus-PC
+Process     : java.exe <6040>
+Thread      : OSPL Garbage Collector 21492
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_spliced/v_spliced.c/2439/0/1481006898.778891919
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:48:19 Central Standard Time 2016
+Description : Processing of lease 0x119b0f0 is behind schedule; expiry-time=1481006840.219389677s and lag=59.357622592s (actionId=1 and duration=10.000000000s). Assuming resuming after hibernate...
+Node        : Asus-PC
+Process     : java.exe <10396>
+Thread      : watchdog 13260
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_leaseManager/v_leaseManager.c/775/0/1481006899.577111057
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:48:19 Central Standard Time 2016
+Description : Processing of lease 0x1dfd9310 is behind schedule; expiry-time=1481006832.208213396s and lag=67.368798873s (actionId=6 and duration=2.000000000s). This is often an indication that the machine is too busy. The lease manager will continue to function normally.
+Node        : Asus-PC
+Process     : java.exe <10396>
+Thread      : watchdog 13260
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_leaseManager/v_leaseManager.c/795/0/1481006899.578086533
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:48:19 Central Standard Time 2016
+Description : Processing of lease 0x1dfd8870 is behind schedule; expiry-time=1481006832.208005557s and lag=67.369006712s (actionId=5 and duration=2.000000000s). This is often an indication that the machine is too busy. The lease manager will continue to function normally.
+Node        : Asus-PC
+Process     : java.exe <10396>
+Thread      : watchdog 13260
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_leaseManager/v_leaseManager.c/795/0/1481006899.578698504
+========================================================================================
+Report      : WARNING
+Date        : Tue Dec 06 00:48:19 Central Standard Time 2016
+Description : Processing of lease 0x1e001d50 is behind schedule; expiry-time=1481006840.367373400s and lag=59.209638869s (actionId=1 and duration=10.000000000s). Assuming resuming after hibernate...
+Node        : Asus-PC
+Process     : java.exe <10396>
+Thread      : watchdog 13260
+Internals   : V6.4.140407OSS/3b83e82/3b83e82/v_leaseManager/v_leaseManager.c/775/0/1481006899.579254025

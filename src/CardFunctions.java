@@ -21,6 +21,8 @@ public class CardFunctions {
     public static int GetValue(char b) {
         if (b == 'K' || b == 'Q' || b == 'J' || b == 'T') {
             return 10;
+        } else if (b == 'A') {
+            return 11;
         } else {
             return b - 48;
         }

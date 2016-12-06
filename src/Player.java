@@ -62,17 +62,36 @@ public class Player {
 
     public void PlayCards(bjDealer d) {
         int sum = 0;
-        playerCards.add(d.cards[0]);
+        card c = new card();
+        c.base_value = d.cards[0].base_value;
+        c.suite = d.cards[0].suite;
+        c.visible = d.cards[0].visible;
+        playerCards.add(c);
         CardFunctions.PrintCards(playerCards);
-
+        int aceExists = 0;
         for (int i = 0; i < playerCards.size(); ++i) {
-            if (d.cards[i].base_value != 0)
-                sum += CardFunctions.GetValue(d.cards[i].base_value);
+            if (playerCards.get(i).base_value == 'A') {
+                aceExists++;
+            }
+            sum += CardFunctions.GetValue(playerCards.get(i).base_value);
         }
         if (sum > 21) {
-            PlayerPrint("Sum = " + sum + "\nBUSTED!");
-            this.Publish(bjp_action.exiting);
-            return;
+            while (aceExists != 0) {
+                sum -= 10;
+                aceExists--;
+                if (sum == 21) {
+                    PlayerPrint("BLACKJACK!");
+                    break;
+                }
+            }
+            if (sum > 21) {
+                PlayerPrint("Sum = " + sum + "\nBUSTED!");
+                this.Publish(bjp_action.exiting);
+                return;
+            }
+        }
+        if (sum == 21) {
+            PlayerPrint("BLACKJACK!");
         }
         Scanner a = new Scanner(System.in);
         PlayerPrint("Sum = " + sum + "\nHit(1) or Stay(2)?:");
@@ -160,7 +179,7 @@ public class Player {
 
                 }
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException ie) {
                     // nothing to do
                 }
@@ -175,118 +194,6 @@ public class Player {
         };
         Thread t = new Thread(b);
         t.start();
-    }
-
-    public void PublishInit(String partitionName, Player p) {
-        DDSEntityManager mgr = new DDSEntityManager();
-        // create Domain Participant
-        mgr.createParticipant("CR");
-        // create Type
-        bjPlayerTypeSupport msgTS = new bjPlayerTypeSupport();
-        mgr.registerType(msgTS);
-        // create Topic
-        mgr.createTopic("Player");
-        // create Publisher
-        mgr.createPublisher();
-        // create DataWriter
-        mgr.createWriter();
-        // Publish Events
-        DataWriter dwriter = mgr.getWriter();
-        bjPlayerDataWriter playerWriter = bjPlayerDataWriterHelper.narrow(dwriter);
-//            bjPlayer msgInstance = new bjPlayer();
-        System.out.println("=== [Player Publisher] writing a message containing :");
-        System.out.println("    uuid  : " + p.player.uuid);
-        System.out.println("    seqno : \"" + p.player.seqno + "\"");
-        playerWriter.register_instance(p.player);
-        int status = playerWriter.write(p.player, HANDLE_NIL.value);
-        ErrorHandler.checkStatus(status, "MsgDataWriter.write");
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        // clean up
-        mgr.getPublisher().delete_datawriter(playerWriter);
-        mgr.deletePublisher();
-
-        mgr.deleteTopic();
-        mgr.deleteParticipant();
-        boolean recievedDealerID = false;
-        while (!recievedDealerID) {
-            partitionName = "Dealer";
-
-            // create Domain Participant
-            mgr.createParticipant(partitionName);
-
-            // create Type
-            bjDealerTypeSupport msgTSs = new bjDealerTypeSupport();
-            mgr.registerType(msgTSs);
-
-            // create Topic
-            mgr.createTopic("Dealer");
-
-            // create Subscriber
-            mgr.createSubscriber();
-
-            // create DataReader
-            mgr.createReader();
-
-            // Read Events
-
-            DataReader dreader = mgr.getReader();
-            bjDealerDataReader HelloWorldReader = bjDealerDataReaderHelper.narrow(dreader);
-
-            bjDealerSeqHolder msgSeq = new bjDealerSeqHolder();
-            SampleInfoSeqHolder infoSeq = new SampleInfoSeqHolder();
-
-            System.out.println("=== [DealerSubscriber] Waiting for dealer: ...");
-            boolean terminate = false;
-            int count = 0;
-            while (!terminate) { // We dont want the example to run indefinitely
-                HelloWorldReader.take(msgSeq, infoSeq, LENGTH_UNLIMITED.value,
-                        ANY_SAMPLE_STATE.value, ANY_VIEW_STATE.value,
-                        ANY_INSTANCE_STATE.value);
-                for (int i = 0; i < msgSeq.value.length; i++) {
-                    if (msgSeq.value[i].getClass() == bjDealer.class && msgSeq.value[i].action == bjd_action.waiting) {//.message.equals("Hello World")) {
-                        System.out.println("=== [DealerSubscriber] message received from Dealer with id " + msgSeq.value[i].uuid + " :");
-                        this.player.dealer_id = msgSeq.value[i].uuid;
-                        terminate = true;
-                    }
-                }
-                try {
-                    Thread.sleep(200);
-                } catch (InterruptedException ie) {
-                    // nothing to do
-                }
-                ++count;
-
-            }
-            HelloWorldReader.return_loan(msgSeq, infoSeq);
-
-            // clean up
-            mgr.getSubscriber().delete_datareader(HelloWorldReader);
-            mgr.deleteSubscriber();
-            mgr.deleteTopic();
-            mgr.deleteParticipant();
-
-        }
-
-    }
-
-    public void update() {
-
-        if (GameManager.tables != null)
-            for (Table t : GameManager.tables) {
-                for (bjPlayer p : t.players) {
-                    if (p.uuid == this.player.uuid) {
-                        if (this.player.dealer_id == 0) {
-                            this.player.dealer_id = p.dealer_id;
-                            System.out.println("Updated Dealer ID");
-                        }
-                    }
-                }
-            }
-
     }
 
     public void Publish(bjp_action action) {
@@ -316,7 +223,7 @@ public class Player {
         int status = playerWriter.write(this.player, HANDLE_NIL.value);
         ErrorHandler.checkStatus(status, "MsgDataWriter.write");
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } catch (InterruptedException ie) {
             // nothing to do
         }
