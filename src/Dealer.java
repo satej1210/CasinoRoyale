@@ -114,9 +114,10 @@ public class Dealer {
     }
 
     public void DealToSelf() {
-        CR.card d = CardFunctions.PickCard(cards);
-        dealerCards.add(d);
-        CardFunctions.PrintCard(d);
+        CardAndDeck cd = new CardAndDeck(cards);
+        CardFunctions.PickCard(cd);
+        dealerCards.add(cd.card);
+        CardFunctions.PrintCard(cd.card);
     }
 
     public void DealCards(bjPlayer p) {
@@ -130,7 +131,10 @@ public class Dealer {
             l = new PlayerCards(p.uuid);
             players.add(l);
         }
-        CardFunctions.PrintCard(CardFunctions.PickCard(cards));
+        CardAndDeck cd = new CardAndDeck(cards);
+        CardFunctions.PickCard(cd);
+        CardFunctions.PrintCard(cd.card);
+        this.dealer.cards[0] = cd.card;
         this.dealer.cards[0].visible = false;
         l.playerCards.add(this.dealer.cards[0]);
         CardFunctions.PrintCard(this.dealer.cards[0]);

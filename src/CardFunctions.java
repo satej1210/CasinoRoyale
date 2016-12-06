@@ -8,14 +8,13 @@ import java.util.Stack;
  * Created by satejmhatre on 11/4/16.
  */
 public class CardFunctions {
-    public static card PickCard(ArrayList<CR.card> cards) {
+    public static card PickCard(CardAndDeck d) {
         Stack cardList = new Stack<CR.card>();
-        cardList.addAll(cards);
+        cardList.addAll(d.c);
         CR.card c = (CR.card)cardList.pop();
         ArrayList t = new ArrayList(cardList);
-        cards = t;
-
-
+        d.c = t;
+        d.card = c;
         return c;
     }
 
