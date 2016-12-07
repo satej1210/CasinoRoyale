@@ -6,15 +6,14 @@ import CR.*;
 import DDS.*;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Dealer {
     public final static int DECKS = 6;
+    private static boolean gameRunning = true;
     private bjDealer dealer;
     private int credits;
     private ArrayList<CR.card> cards, dealerCards;
     private ArrayList<PlayerCards> players;
-
     private int playerCount = 0;
 
     Dealer() {
@@ -39,22 +38,14 @@ public class Dealer {
 
     public static void main(String args[]) {
         Dealer d = new Dealer();
-        d.dealer.action = bjd_action.shuffling;
-        //d.Publish(bjd_action.waiting);
-        d.Subscribe();
-
-//        CardFunctions.PrintDeck(d.cards);
-        card c;
-        CardFunctions.GenerateDeck(d.cards);
-
-        d.cards = CardFunctions.ShuffleCards(d.cards);
+        d.start();
         //d.AskBets();
-        System.out.println(MAX_PLAYERS.value);
-        Scanner reader = new Scanner(System.in);
-
-        System.out.println("Enter a number: ");
-        int n = reader.nextInt();
-        System.out.println("number: " + n);
+//        System.out.println(MAX_PLAYERS.value);
+//        Scanner reader = new Scanner(System.in);
+//
+//        System.out.println("Enter a number: ");
+//        int n = reader.nextInt();
+//        System.out.println("number: " + n);
 //        Publish("Dealer", d);
         //d.Publish(bjd_action.collecting);
 
@@ -62,6 +53,18 @@ public class Dealer {
 
     public void DealerPrint(String x) {
         System.out.println("[Dealer " + this.dealer.uuid + "**Credits = " + credits + "] " + x);
+    }
+
+    public void start() {
+
+        this.DealerPrint("New Game!!!");
+        gameRunning = true;
+
+        this.dealer.action = bjd_action.shuffling;
+        card c;
+        CardFunctions.GenerateDeck(this.cards);
+        this.cards = CardFunctions.ShuffleCards(this.cards);
+        this.Subscribe();
     }
 
     public void Publish(bjd_action a) {
@@ -266,6 +269,17 @@ public class Dealer {
                 }
 
             }
+            if (dealerSum == sum) {
+                DealerPrint("No one wins");
+                player_status m = null;
+                for (player_status ps : this.dealer.players) {
+                    if (ps.uuid == p.uuid) {
+                        m = ps;
+                    }
+                }
+                m.wager = 0;
+                this.Publish(bjd_action.paying);
+            }
         }
     }
 
@@ -313,35 +327,6 @@ public class Dealer {
         }
     }
 
-    public void Sub2(bjPlayerSeqHolder msgSeq) {
-        for (int i = 0; i < msgSeq.value.length; i++) {
-            bjPlayer p = msgSeq.value[i];
-            if (p.getClass() == bjPlayer.class) {
-                this.dealer.target_uuid = p.uuid;
-                if (p.action == bjp_action.joining) {
-                    this.PlayerJoining(p);
-                }
-                if (p.action == bjp_action.wagering) {
-                    this.PlayerWagering(p);
-                    this.DealCards(p);
-                    this.DealToSelf();
-                }
-                if (p.action == bjp_action.requesting_a_card) {
-                    this.DealCards(p);
-                    this.DealToSelf();
-                }
-                if (p.action == bjp_action.exiting) {
-                    this.PlayerExiting(p);
-                }
-                if (p.action == bjp_action.none) {
-                    this.PlayerStay(p);
-                }
-
-            }
-
-
-        }
-    }
     public void Subscribe() {
         Runnable b = () -> {
             DDSEntityManager mgr = new DDSEntityManager();
@@ -363,7 +348,34 @@ public class Dealer {
                 HelloWorldReader.take(msgSeq, infoSeq, LENGTH_UNLIMITED.value,
                         ANY_SAMPLE_STATE.value, ANY_VIEW_STATE.value,
                         ANY_INSTANCE_STATE.value);
-                Sub2(msgSeq);
+                for (int i = 0; i < msgSeq.value.length; i++) {
+                    bjPlayer p = msgSeq.value[i];
+                    if (p.getClass() == bjPlayer.class) {
+                        this.dealer.target_uuid = p.uuid;
+                        if (p.action == bjp_action.joining) {
+                            this.PlayerJoining(p);
+                        }
+                        if (p.action == bjp_action.wagering) {
+                            this.PlayerWagering(p);
+                            this.DealCards(p);
+                            this.DealToSelf();
+                        }
+                        if (p.action == bjp_action.requesting_a_card) {
+                            this.DealCards(p);
+                            this.DealToSelf();
+                        }
+                        if (p.action == bjp_action.exiting) {
+                            this.PlayerExiting(p);
+                        }
+                        if (p.action == bjp_action.none) {
+                            this.PlayerStay(p);
+                            terminate = true;
+                        }
+
+                    }
+
+
+                }
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException ie) {
@@ -377,6 +389,9 @@ public class Dealer {
             mgr.deleteSubscriber();
             mgr.deleteTopic();
             mgr.deleteParticipant();
+            DealerPrint("Subscriber Closing.");
+
+            // main(new String[2]);
         };
         Thread t = new Thread(b);
         t.start();

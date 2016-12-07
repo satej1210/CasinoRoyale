@@ -10,8 +10,10 @@ import java.util.Scanner;
 
 
 public class Player {
+    private static boolean gameRunning = true;
     private bjPlayer player = null;
     private ArrayList<CR.card> playerCards;
+    private Thread Sub, Pub;
     private int playerMode = 0; //1 : Mr. Conservative, 2 : Mr. I believe in Luck, 3 : Mr. Card Counter
     Player() {
         player = new bjPlayer();
@@ -27,11 +29,12 @@ public class Player {
     public static void main(String args[]) {
         Player p = new Player();
         Scanner reader = new Scanner(System.in);
-        System.out.println("Choose Mode:\n1. Mr. Conservative\n2. Mr. I believe in Luck\n3. Mr. Card Counter\n : ");
-        int opt = reader.nextInt();
+        System.out.println("Choose Mode:\n1. Mr. Conservative\n2. Mr. I believe in Luck\n3. Mr. Card Counter\n: ");
+        int opt = 1;
         p.playerMode = opt;
         p.Publish(bjp_action.joining);
         p.SubscribeDealer();
+
     }
 
     public void PlayerPrint(String x) {
@@ -128,9 +131,17 @@ public class Player {
             }
         }
         if (m != null) {
-            float pay = (float) 3 / 2 * (float) m.wager;
-            this.player.credits += pay;
-            PlayerPrint("Credits = " + this.player.credits);
+            if (m.wager != 0) {
+                PlayerPrint("Player Wins!!!");
+                float pay = (float) 3 / 2 * (float) m.wager;
+                this.player.credits += pay;
+                PlayerPrint("Credits = " + this.player.credits);
+            } else if (m.wager < 0) {
+                PlayerPrint("Dealer Wins :(");
+            } else {
+                PlayerPrint("No one wins");
+            }
+
         }
     }
 
@@ -203,8 +214,11 @@ public class Player {
                                     this.PlayCards(d);
                                 }
                                 if (d.action == bjd_action.paying) {
-                                    PlayerPrint("Player Wins!!!");
+
+
                                     this.PlayerWin(d);
+                                    terminate = true;
+                                    gameRunning = false;
                                 }
                             }
                             this.player.seqno++;
@@ -226,9 +240,11 @@ public class Player {
             mgr.deleteSubscriber();
             mgr.deleteTopic();
             mgr.deleteParticipant();
+            PlayerPrint("Subscriber Closing.");
+//            main(new String[2]);
         };
-        Thread t = new Thread(b);
-        t.start();
+        Sub = new Thread(b);
+        Sub.start();
     }
 
     public void Publish(bjp_action action) {
