@@ -7,6 +7,7 @@ import DDS.*;
 
 import java.util.ArrayList;
 
+//This is the Dealer class which adds functionality to the bjDealer.
 public class Dealer {
     public final static int DECKS = 6;
     private static boolean gameRunning = true;
@@ -17,44 +18,47 @@ public class Dealer {
     private int playerCount = 0;
 
     Dealer() {
-        dealer = new bjDealer();
-        dealer.uuid = UUIDGen.generate_UUID();
+        dealer = new bjDealer();                //Creates an object dealer of bjDealer()
+        dealer.uuid = UUIDGen.generate_UUID();  //Generating UUID for the object dealer
 //        dealer.cards = new card[21];
-        dealer.action = bjd_action.shuffling;
-        dealer.seqno = 0;
-        credits = 500;
+        dealer.action = bjd_action.shuffling;   //Dealer shuffles the cards
+        dealer.seqno = 0;                       //Initializing the sequence number of the Dealer to 0
+        credits = 500;                          //Initializing the credits to 500
         for (int i = 0; i < 21; ++i) {
             dealer.cards[i].suite = 0;
         }
-        dealerCards = new ArrayList<>();
-        players = new ArrayList<>();
-        cards = new ArrayList<>();
-        CardFunctions.GenerateDeck(cards);
+        dealerCards = new ArrayList<>();        //Creating an ArrayList for dealerCards
+        players = new ArrayList<>();            //Creating an ArrayList for players
+        cards = new ArrayList<>();              //Creating a new ArrayList for cards 
+        CardFunctions.GenerateDeck(cards);      //Generates cards
     }
 
+    //Dealer assigning Constructor
     Dealer(bjDealer d) {
         dealer = d;
     }
 
+    /**The main method creates an instance d of the class Dealer. Then the method calls the
+    * start function to start the game.
+    *
+    */
     public static void main(String args[]) {
         Dealer d = new Dealer();
         d.start();
-        //d.AskBets();
-//        System.out.println(MAX_PLAYERS.value);
-//        Scanner reader = new Scanner(System.in);
-//
-//        System.out.println("Enter a number: ");
-//        int n = reader.nextInt();
-//        System.out.println("number: " + n);
-//        Publish("Dealer", d);
-        //d.Publish(bjd_action.collecting);
-
     }
 
+    /**The DealerPrint method prints the credit the Dealer currently has. The method also has a paramter String x, 
+    * that is printed along with the credits.
+    *
+    */
     public void DealerPrint(String x) {
         System.out.println("[Seq No = " + this.dealer.seqno + " Dealer " + this.dealer.uuid + "**Credits = " + credits + "] " + x);
     }
 
+    /** The Wait method pauses the game for a certain amount of time. 
+     * The amount of time the game is paused for depends on the parameter int ms, time in milli seconds. 
+     *
+     */
     public void Wait(int ms) {
         try {
             Thread.sleep(ms);
@@ -63,6 +67,11 @@ public class Dealer {
 
         }
     }
+    
+    /** The method start() starts a new game. Then the Dealer is asked to shuffle the cards. 
+     * It then calls the wait function. The function then Subscribes with the appropriate response.
+     *
+     */
     public void start() {
 
         this.DealerPrint("New Game!!!");
@@ -100,7 +109,6 @@ public class Dealer {
         mgr.createWriter();
 
         // Publish Events
-
         DataWriter dwriter = mgr.getWriter();
         bjDealerDataWriter dealerWriter = bjDealerDataWriterHelper.narrow(dwriter);
         bjDealer d = this.dealer;
@@ -124,11 +132,13 @@ public class Dealer {
         mgr.deletePublisher();
         mgr.deleteTopic();
         mgr.deleteParticipant();
-
-
-
     }
 
+    /* In the method DealToSelf, the Dealer deals cards to himself or herself. The function
+     * then calculates and prints the total sum of the Dealer's cards by running a for loop through the
+     * Dealer's cards and calling the DealerPrint function to print the sum. The function then calls the Wait 
+     * function to pause the game for 5000 milliseconds.
+     */
     public void DealToSelf() {
         CardAndDeck cd = new CardAndDeck(cards);
         card c = new card();
@@ -148,6 +158,7 @@ public class Dealer {
         Wait(5000);
     }
 
+    
     public void DealCards(bjPlayer p) {
         DealerPrint("Dealing Cards ");
         PlayerCards l = null;
@@ -198,8 +209,7 @@ public class Dealer {
         if (!flag && playerCount + 1 < MAX_PLAYERS.value) {
             this.dealer.players[playerCount].uuid = p.uuid;
             this.dealer.players[playerCount++].wager = p.wager;
-
-//            this.Publish(bjd_action.waiting);
+            
             this.Publish(bjd_action.collecting);
         }
         Wait(5000);
@@ -347,6 +357,10 @@ public class Dealer {
         }
     }
 
+    /** The CheckSize() method cchecks the number of the players on the table by comparing
+     * the number of players to 6 (MAX_PLAYERS.value). If the number of players is greater than
+     * or equal to 6, then it prints "Players full".
+     */
     public void CheckSize() {
         if (players.size() >= MAX_PLAYERS.value) {
             System.out.println("Players full");
