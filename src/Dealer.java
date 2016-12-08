@@ -20,7 +20,6 @@ public class Dealer {
     Dealer() {
         dealer = new bjDealer();                //Creates an object dealer of bjDealer()
         dealer.uuid = UUIDGen.generate_UUID();  //Generating UUID for the object dealer
-//        dealer.cards = new card[21];
         dealer.action = bjd_action.shuffling;   //Dealer shuffles the cards
         dealer.seqno = 0;                       //Initializing the sequence number of the Dealer to 0
         credits = 500;                          //Initializing the credits to 500
@@ -430,8 +429,6 @@ public class Dealer {
             mgr.deleteTopic();
             mgr.deleteParticipant();
             DealerPrint("Subscriber Closing.");
-
-            // main(new String[2]);
         };
         Thread t = new Thread(b);
         t.start();
