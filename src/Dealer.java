@@ -20,7 +20,7 @@ public class Dealer {
         dealer = new bjDealer();
         dealer.uuid = UUIDGen.generate_UUID();
 //        dealer.cards = new card[21];
-        dealer.action = bjd_action.waiting;
+        dealer.action = bjd_action.shuffling;
         dealer.seqno = 0;
         credits = 500;
         for (int i = 0; i < 21; ++i) {
@@ -52,9 +52,17 @@ public class Dealer {
     }
 
     public void DealerPrint(String x) {
-        System.out.println("[Dealer " + this.dealer.uuid + "**Credits = " + credits + "] " + x);
+        System.out.println("[Seq No = " + this.dealer.seqno + " Dealer " + this.dealer.uuid + "**Credits = " + credits + "] " + x);
     }
 
+    public void Wait(int ms) {
+        try {
+            Thread.sleep(ms);
+            DealerPrint("Waiting " + ms / 1000 + "s");
+        } catch (Exception e) {
+
+        }
+    }
     public void start() {
 
         this.DealerPrint("New Game!!!");
@@ -64,6 +72,11 @@ public class Dealer {
         card c;
         CardFunctions.GenerateDeck(this.cards);
         this.cards = CardFunctions.ShuffleCards(this.cards);
+        this.dealer.seqno++;
+        DealerPrint("Shuffling the Deck...");
+        this.Wait(5000);
+        this.dealer.seqno++;
+        this.dealer.action = bjd_action.waiting;
         this.Subscribe();
     }
 
@@ -131,10 +144,12 @@ public class Dealer {
         for (card d : dealerCards) {
             sum += CardFunctions.GetValue(d.base_value);
         }
-
+        DealerPrint("Dealer Sum = " + sum);
+        Wait(5000);
     }
 
     public void DealCards(bjPlayer p) {
+        DealerPrint("Dealing Cards ");
         PlayerCards l = null;
         for (PlayerCards c : players) {
             if (c.uuid == p.uuid) {
@@ -151,8 +166,9 @@ public class Dealer {
         this.dealer.cards[0] = cd.card;
         this.dealer.cards[0].visible = false;
         l.playerCards.add(this.dealer.cards[0]);
-        System.out.println("Dealing Cards ");
+
         this.Publish(bjd_action.dealing);
+        Wait(5000);
     }
 
     public void PlayerWagering(bjPlayer p) {
@@ -164,13 +180,13 @@ public class Dealer {
                 System.out.println("Player has set wager of " + p.wager);
             }
         }
-
+        Wait(5000);
 
     }
 
     public void PlayerJoining(bjPlayer p) {
         boolean flag = false;
-        System.out.println("=== [DealerSubscriber] Player message: joining :");
+        DealerPrint("Player With ID " + p.uuid + " is joining...");
         for (player_status a : this.dealer.players) {
             if (a.uuid == p.uuid) {
                 System.out.println("Player exists");
@@ -183,9 +199,10 @@ public class Dealer {
             this.dealer.players[playerCount].uuid = p.uuid;
             this.dealer.players[playerCount++].wager = p.wager;
 
-            this.Publish(bjd_action.waiting);
+//            this.Publish(bjd_action.waiting);
             this.Publish(bjd_action.collecting);
         }
+        Wait(5000);
     }
 
     public void PlayerStay(bjPlayer p) {
@@ -234,7 +251,7 @@ public class Dealer {
                 dealerSum += CardFunctions.GetValue(c.base_value);
             }
             DealerPrint("Sum = " + dealerSum);
-            if (dealerSum == 17) {
+            if (dealerSum >= 17) {
                 DealerPrint("Dealer is Staying");
             }
             while (dealerSum < 17) {
@@ -251,8 +268,16 @@ public class Dealer {
                 DealerPrint("Dealer is Staying");
             }
             if (dealerSum > 21) {
-                DealerPrint("Dealer has Busted!");
-                this.Publish(bjd_action.paying);
+                while (dealerAceExists > 0) {
+                    dealerSum -= 10;
+                    dealerAceExists--;
+                }
+                if (dealerSum > 21) {
+                    DealerPrint("Dealer has Busted!");
+                    this.Publish(bjd_action.paying);
+                } else {
+                    DealerPrint("Ace Exists! Sum = " + dealerSum);
+                }
             }
             if (dealerSum < sum) {
                 DealerPrint("Player Wins!");
@@ -270,7 +295,7 @@ public class Dealer {
 
             }
             if (dealerSum == sum) {
-                DealerPrint("No one wins");
+                DealerPrint("It's a Tie!");
                 player_status m = null;
                 for (player_status ps : this.dealer.players) {
                     if (ps.uuid == p.uuid) {
@@ -281,6 +306,7 @@ public class Dealer {
                 this.Publish(bjd_action.paying);
             }
         }
+        Wait(5000);
     }
 
     public void PlayerExiting(bjPlayer p) {
@@ -371,7 +397,7 @@ public class Dealer {
                             this.PlayerStay(p);
                             terminate = true;
                         }
-
+                        this.dealer.seqno++;
                     }
 
 

@@ -29,7 +29,7 @@ public class Player {
     public static void main(String args[]) {
         Player p = new Player();
         Scanner reader = new Scanner(System.in);
-        System.out.println("Choose Mode:\n1. Mr. Conservative\n2. Mr. I believe in Luck\n3. Mr. Card Counter\n: ");
+        System.out.println("Choose Mode:\n1. Mr. Conservative\n2. Mr. I believe in Luck\n3. Mr. Card Counter\n: 1");
         int opt = 1;
         p.playerMode = opt;
         p.Publish(bjp_action.joining);
@@ -38,15 +38,22 @@ public class Player {
     }
 
     public void PlayerPrint(String x) {
-        System.out.println("[Player " + this.player.uuid + " !! SeqNo: " + this.player.seqno + "] " + x);
+        System.out.println("[Player " + this.player.uuid + " !! SeqNo: " + this.player.seqno + " !! Credits = " + this.player.credits + "] " + x);
     }
 
     public void DealerCollecting(bjDealer d) {
         PlayerPrint("Message received from Dealer with id " + d.uuid + " :");
         Scanner a = new Scanner(System.in);
-        PlayerPrint("Enter bets:");
+        PlayerPrint("Wagering");
         //int x = a.nextInt();
         int x = 10;
+        if (playerMode == 1) {
+            x = 1;
+        } else if (playerMode == 2) {
+            //Luck Stuff
+        } else {
+            //CardCounter Stuff
+        }
         if (x < this.player.credits) {
             this.player.credits = this.player.credits - x;
             this.player.wager = x;
@@ -63,7 +70,7 @@ public class Player {
                 sum -= 10;
                 aceExists--;
                 if (sum == 21) {
-                    s = ("BLACKJACK!");
+                    s = ("Sum = 21!");
                     break;
                 }
             }
@@ -73,7 +80,8 @@ public class Player {
 
             }
         } else if (sum == 21) {
-            s = ("BLACKJACK!");
+            s = ("Sum = 21!");
+
         }
         return s;
     }
@@ -187,11 +195,12 @@ public class Player {
                         bjDealer d = msgSeq.value[i];
                         if (d.getClass() == bjDealer.class) {
                             if (this.player.dealer_id == 0) {
-                                if (d.action == bjd_action.waiting) {
-                                    PlayerPrint("Dealer has Entered!");
+                                if (d.action == bjd_action.collecting) {
+                                    PlayerPrint("Dealer has accepted and is collecting!");
                                     this.player.dealer_id = d.uuid;
-                                    this.Publish(bjp_action.joining);
-                                } else {
+                                    this.DealerCollecting(d);
+                                    //this.player.action = bjp_action.requesting_a_card;
+                                    this.player.seqno++;
                                     continue;
                                 }
                             }
@@ -201,14 +210,7 @@ public class Player {
                                     //this.player.dealer_id = d.uuid;
                                     //this.Publish(bjp_action.joining);
                                 }
-                                if (d.action == bjd_action.collecting) {
-                                    PlayerPrint("Dealer collecting!");
-                                    this.DealerCollecting(d);
-                                    //this.player.action = bjp_action.requesting_a_card;
 
-                                    ++count;
-                                    continue;
-                                }
                                 if (d.action == bjd_action.dealing) {
                                     PlayerPrint("Cards Recieved");
                                     this.PlayCards(d);
@@ -274,7 +276,7 @@ public class Player {
         int status = playerWriter.write(this.player, HANDLE_NIL.value);
         ErrorHandler.checkStatus(status, "MsgDataWriter.write");
         try {
-            Thread.sleep(1000);
+            Thread.sleep(4000);
         } catch (InterruptedException ie) {
             // nothing to do
         }

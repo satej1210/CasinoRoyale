@@ -4,19 +4,19 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98df0f42-e8ec-48c6-9c5b-a9b7155918c4" name="Default" comment="m">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/GameManager.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/HelloWorldDataPublisher.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/HelloWorldDataSubscriber.xml" afterPath="" />
+    <list default="true" id="98df0f42-e8ec-48c6-9c5b-a9b7155918c4" name="Default" comment="...">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test Results - CardFunctionsTest_(1).html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CR/Dealer.class" afterPath="$PROJECT_DIR$/out/production/CR/Dealer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CR/Player.class" afterPath="$PROJECT_DIR$/out/production/CR/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/All.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/All.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CR/UUIDGen.class" afterPath="$PROJECT_DIR$/out/production/CR/UUIDGen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/diag.uml" afterPath="$PROJECT_DIR$/src/diag.uml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/diagram.png" afterPath="$PROJECT_DIR$/src/diagram.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ospl-error.log" afterPath="$PROJECT_DIR$/ospl-error.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ospl-info.log" afterPath="$PROJECT_DIR$/ospl-info.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Dealer.java" afterPath="$PROJECT_DIR$/src/Dealer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.java" afterPath="$PROJECT_DIR$/src/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Snooper.java" afterPath="$PROJECT_DIR$/src/Snooper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UUIDGen.java" afterPath="$PROJECT_DIR$/src/UUIDGen.java" />
     </list>
     <ignored path="CR.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,6 +33,7 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" openResultsInEditor="true" userTempatePath="" />
   <component name="FavoritesManager">
     <favorites_list name="CR" />
   </component>
@@ -41,8 +42,18 @@
       <file leaf-file-name="CardFunctions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CardFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UUIDGen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UUIDGen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -51,8 +62,8 @@
       <file leaf-file-name="CardFunctionsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CardFunctionsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+            <state relative-caret-position="306">
+              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,23 +75,10 @@
         <entry file="file://$PROJECT_DIR$/src/Snooper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding>
-                <element signature="e#3304#3305#0" expanded="true" />
-                <element signature="e#3356#3357#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CardAndDeck.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CardAndDeck.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-              <folding>
-                <element signature="e#200#201#0" expanded="true" />
-                <element signature="e#222#223#0" expanded="true" />
+                <element signature="e#3226#3227#0" expanded="true" />
+                <element signature="e#3278#3279#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,8 +87,8 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="178" column="38" selection-start-line="178" selection-start-column="38" selection-end-line="178" selection-end-column="38" />
+            <state relative-caret-position="1184">
+              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -98,7 +96,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlayerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlayerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -108,31 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bjp_action.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/CR/bjp_action.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bjPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/CR/bjPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dealer.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Dealer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Dealer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4624">
-              <caret line="280" column="46" selection-start-line="280" selection-start-column="46" selection-end-line="280" selection-end-column="46" />
+            <state relative-caret-position="4165">
+              <caret line="252" column="27" selection-start-line="252" selection-start-column="27" selection-end-line="252" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -144,6 +122,109 @@
             <state relative-caret-position="476">
               <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="diag.uml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/diag.uml">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="1044.5" y="941.0">Snooper</node>
+                <node x="643.25" y="0.0">CR.card</node>
+                <node x="186.0" y="198.0">CR.bjd_action</node>
+                <node x="473.0" y="1214.0">CR.MAX_PLAYERS</node>
+                <node x="85.8083333333334" y="531.5">CR.bjDealer</node>
+                <node x="0.0" y="1214.0">ErrorHandler</node>
+                <node x="1317.9750000000001" y="886.0">Player</node>
+                <node x="0.0" y="198.0">CR.player_status</node>
+                <node x="1398.75" y="198.0">CR.bjp_action</node>
+                <node x="1398.75" y="531.5">CR.bjPlayer</node>
+                <node x="834.0" y="366.0">DDSEntityManager</node>
+                <node x="270.0" y="1214.0">UUIDGen</node>
+                <node x="334.0" y="154.0">CardFunctions</node>
+                <node x="663.0" y="209.0">CardAndDeck</node>
+                <node x="511.1937417654811" y="831.0">Dealer</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="Player" target="CR.bjPlayer">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Dealer" target="CR.bjDealer">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Player" target="DDSEntityManager">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Dealer" target="CardAndDeck">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Snooper" target="DDSEntityManager">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="CR.bjDealer" target="CR.bjd_action">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Dealer" target="CR.card">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Snooper" target="CR.bjPlayer">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="CR.bjPlayer" target="CR.bjp_action">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Dealer" target="DDSEntityManager">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="CR.bjDealer" target="CR.player_status">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="CardAndDeck" target="CR.card">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="CR.player_status" target="CR.card">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="CardFunctions" target="CR.card">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="Player" target="CR.card">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="CR.bjDealer" target="CR.card">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.43609022556390975" x="-445.8534482758621" y="540.344827586207" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+                <Category>Properties</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>public</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -180,7 +261,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/HelloWorldDataPublisher.java" />
         <option value="$PROJECT_DIR$/src/End.java" />
-        <option value="$PROJECT_DIR$/src/UUIDGen.java" />
         <option value="$PROJECT_DIR$/src/HelloWorldDataSubscriber.java" />
         <option value="$PROJECT_DIR$/src/CR/Player2.java" />
         <option value="$PROJECT_DIR$/src/Player2.java" />
@@ -195,8 +275,9 @@
         <option value="$PROJECT_DIR$/src/CardFunctions.java" />
         <option value="$PROJECT_DIR$/src/PlayerTest.java" />
         <option value="$PROJECT_DIR$/src/Snooper.java" />
-        <option value="$PROJECT_DIR$/src/Dealer.java" />
+        <option value="$PROJECT_DIR$/src/UUIDGen.java" />
         <option value="$PROJECT_DIR$/src/Player.java" />
+        <option value="$PROJECT_DIR$/src/Dealer.java" />
       </list>
     </option>
   </component>
@@ -214,10 +295,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -260,7 +340,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -303,6 +383,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -327,7 +425,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -361,7 +459,7 @@
       <recent name="C:\Users\Satej\Dropbox\CR\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CardFunctionsTest (1)">
+  <component name="RunManager" selected="Multirun.DnP">
     <configuration default="false" name="CardFunctionsTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="CR" />
@@ -965,7 +1063,8 @@
       <workItem from="1480908469911" duration="30703000" />
       <workItem from="1481008189927" duration="10424000" />
       <workItem from="1481057865194" duration="298000" />
-      <workItem from="1481058222676" duration="510000" />
+      <workItem from="1481058222676" duration="3943000" />
+      <workItem from="1481128147857" duration="2997000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Dealer&#10;Made Table class&#10;">
       <created>1479155099763</created>
@@ -1051,7 +1150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481051069699</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="...">
+      <created>1481084191201</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1481084191201</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1087,25 +1193,25 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119711000" />
+    <option name="totallyTimeSpent" value="126141000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.49583334" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.49375" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27378437" sideWeight="0.50416666" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33191034" sideWeight="0.50625" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.3562368" sideWeight="0.49583334" order="4" side_tool="false" content_ui="tabs" x="808" y="470" width="910" height="297" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.3562368" sideWeight="0.49583334" order="4" side_tool="false" content_ui="tabs" x="1024" y="754" width="910" height="297" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1765625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35386223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1173,7 +1279,8 @@
     <MESSAGE value="more" />
     <MESSAGE value="mo" />
     <MESSAGE value="m" />
-    <option name="LAST_COMMIT_MESSAGE" value="m" />
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1263,19 +1370,6 @@
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../Project/HDE/x86_64.win64/jar/dcpssaj.jar!/DDS/DomainParticipantFactory.class" />
-    <entry file="file://$PROJECT_DIR$/src/diagram.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UUIDGen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Project/HDE/x86_64.win64/examples/dcps/Casino Royale/idl/cr.idl" />
     <entry file="file://$PROJECT_DIR$/out/production/CR/Dealer.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -1379,6 +1473,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#5367#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2332#2333#0" expanded="false" />
+            <element signature="e#2374#2375#0" expanded="false" />
+            <element signature="e#3822#3823#0" expanded="false" />
+            <element signature="e#3868#3869#0" expanded="false" />
+            <element signature="e#4748#4749#0" expanded="false" />
+            <element signature="e#4796#4797#0" expanded="false" />
+            <element signature="e#5050#5051#0" expanded="false" />
+            <element signature="e#5070#5071#0" expanded="false" />
+            <element signature="e#5104#5105#0" expanded="false" />
+            <element signature="e#5124#5125#0" expanded="false" />
+            <element signature="e#5160#5161#0" expanded="false" />
+            <element signature="e#5183#5184#0" expanded="false" />
+            <element signature="e#5221#5222#0" expanded="false" />
+            <element signature="e#5245#5246#0" expanded="false" />
+            <element signature="e#5273#5274#0" expanded="false" />
+            <element signature="e#5292#5293#0" expanded="false" />
+            <element signature="e#5338#5339#0" expanded="false" />
+            <element signature="e#5363#5364#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1434,69 +1550,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Action.java" />
-    <entry file="file://$PROJECT_DIR$/src/diag.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes>
-            <node x="69.9537037037037" y="880.0">Snooper</node>
-            <node x="0.0" y="1330.0">CardFunctionsTest</node>
-            <node x="1274.4375" y="0.0">ErrorHandler</node>
-            <node x="446.22453703703707" y="488.5">Player</node>
-            <node x="162.06712962962962" y="778.0">Table</node>
-            <node x="209.0" y="187.5">PlayerCards</node>
-            <node x="326.4375" y="0.0">DDSEntityManager</node>
-            <node x="282.0" y="1330.0">UUIDGen</node>
-            <node x="900.4375" y="0.0">CardFunctions</node>
-            <node x="0.0" y="154.0">CardAndDeck</node>
-            <node x="78.06712962962962" y="455.0">Dealer</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="Player" target="DDSEntityManager">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="Dealer" target="CardAndDeck">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="Snooper" target="DDSEntityManager">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="Table" target="Dealer">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="Snooper" target="Table">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="Dealer" target="DDSEntityManager">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="Dealer" target="PlayerCards">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.6161825726141079" x="-130.0" y="379.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Inner Classes</Category>
-            <Category>Constructors</Category>
-            <Category>Properties</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>public</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CardAndDeck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1526,24 +1579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CardFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CardFunctionsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -1555,28 +1590,10 @@
     <entry file="file://$PROJECT_DIR$/src/Snooper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding>
-            <element signature="e#3304#3305#0" expanded="true" />
-            <element signature="e#3356#3357#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dealer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4624">
-          <caret line="280" column="46" selection-start-line="280" selection-start-column="46" selection-end-line="280" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="178" column="38" selection-start-line="178" selection-start-column="38" selection-end-line="178" selection-end-column="38" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#3226#3227#0" expanded="true" />
+            <element signature="e#3278#3279#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1585,6 +1602,156 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CardFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UUIDGen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CardFunctionsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/diagram.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/diag.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="1044.5" y="941.0">Snooper</node>
+            <node x="643.25" y="0.0">CR.card</node>
+            <node x="186.0" y="198.0">CR.bjd_action</node>
+            <node x="473.0" y="1214.0">CR.MAX_PLAYERS</node>
+            <node x="85.8083333333334" y="531.5">CR.bjDealer</node>
+            <node x="0.0" y="1214.0">ErrorHandler</node>
+            <node x="1317.9750000000001" y="886.0">Player</node>
+            <node x="0.0" y="198.0">CR.player_status</node>
+            <node x="1398.75" y="198.0">CR.bjp_action</node>
+            <node x="1398.75" y="531.5">CR.bjPlayer</node>
+            <node x="834.0" y="366.0">DDSEntityManager</node>
+            <node x="270.0" y="1214.0">UUIDGen</node>
+            <node x="334.0" y="154.0">CardFunctions</node>
+            <node x="663.0" y="209.0">CardAndDeck</node>
+            <node x="511.1937417654811" y="831.0">Dealer</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Player" target="CR.bjPlayer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Dealer" target="CR.bjDealer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Player" target="DDSEntityManager">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Dealer" target="CardAndDeck">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Snooper" target="DDSEntityManager">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CR.bjDealer" target="CR.bjd_action">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Dealer" target="CR.card">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Snooper" target="CR.bjPlayer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CR.bjPlayer" target="CR.bjp_action">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Dealer" target="DDSEntityManager">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CR.bjDealer" target="CR.player_status">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CardAndDeck" target="CR.card">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CR.player_status" target="CR.card">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CardFunctions" target="CR.card">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Player" target="CR.card">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CR.bjDealer" target="CR.card">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.43609022556390975" x="-445.8534482758621" y="540.344827586207" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>public</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1184">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dealer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4165">
+          <caret line="252" column="27" selection-start-line="252" selection-start-column="27" selection-end-line="252" selection-end-column="27" />
           <folding />
         </state>
       </provider>
