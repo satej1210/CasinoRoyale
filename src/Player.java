@@ -9,8 +9,8 @@ import DDS.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-// this is the main player class
-// helps add functionality to bjPlayer
+/* this is the main player class
+ helps add functionality to bjPlayer */
 public class Player {
     private static boolean gameRunning = true;
     private bjPlayer player = null;
@@ -40,7 +40,7 @@ public class Player {
         System.out.println("[Player " + this.player.uuid + " !! SeqNo: " + this.player.seqno + " !! Credits = " + this.player.credits + "] " + x);
     }
 
-    // Dealer collects info from player publisher
+    /* Dealer collects info from player publisher */
     public void DealerCollecting(bjDealer d) {
         PlayerPrint("Message received from Dealer with id " + d.uuid + " :");
         Scanner a = new Scanner(System.in);
@@ -63,12 +63,12 @@ public class Player {
         this.Publish(bjp_action.wagering);
     }
 
-    // checks if the sum is less than or equal to or greater than 21
-    // if sum > 21, check is ace exists
-    // if yes, count ace as 1
-    // else, player busted
-    // if sum < 21, player stays and dealer plays
-    // if sum = 21, player stays and dealer plays
+    /* checks if the sum is less than or equal to or greater than 21
+     if sum > 21, check is ace exists
+     if yes, count ace as 1
+     else, player busted
+     if sum < 21, player stays and dealer plays
+     if sum = 21, player stays and dealer plays */
     public String CheckSum(int sum, int aceExists) {
         String s = "L21";
         if (sum > 21) {
@@ -90,8 +90,8 @@ public class Player {
         return s;
     }
 
-    // this method asks the player to either hit or stay
-    // on player choice, hit or stay and print sum
+    /* this method asks the player to either hit or stay
+     on player choice, hit or stay and print sum */
     public void PlayerModePlay(int sum) {
         if (playerMode == 1) {
             Scanner a = new Scanner(System.in);
@@ -135,9 +135,9 @@ public class Player {
         PlayerModePlay(sum);
     }
 
-    // check if player wins, print player wins and add credits to player
-    // check if dealer wins and print dealer wins
-    // check if no one wins and print no one wins
+    /* check if player wins, print player wins and add credits to player
+     check if dealer wins and print dealer wins
+     check if no one wins and print no one wins*/
     public void PlayerWin(bjDealer d) {
         player_status m = null;
         for (player_status ps : d.players) {
@@ -159,7 +159,7 @@ public class Player {
         }
     }
 
-    // this is the dealers subscriber which will communicate with the players publisher
+    /* this is the dealers subscriber which will communicate with the players publisher */
 
     /**
      * The SubscribeDealer function is the main part of the program
@@ -237,7 +237,7 @@ public class Player {
         Sub = new Thread(b);
         Sub.start();
     }
-    // this creates the players
+    /* this creates the players */
     public void Publish(bjp_action action) {
         DDSEntityManager mgr = new DDSEntityManager();
         // create Domain Participant
