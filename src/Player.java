@@ -1,3 +1,4 @@
+
 /**
  * Created by satejmhatre on 10/26/16.
  */
@@ -8,14 +9,14 @@ import DDS.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
+// this is the main player class
+// helps add functionality to bjPlayer
 public class Player {
     private static boolean gameRunning = true;
     private bjPlayer player = null;
     private ArrayList<CR.card> playerCards;
     private Thread Sub, Pub;
     private int playerMode = 0; //1 : Mr. Conservative, 2 : Mr. I believe in Luck, 3 : Mr. Card Counter
-
     Player() {
         player = new bjPlayer();
         player.uuid = UUIDGen.generate_UUID();
@@ -26,7 +27,6 @@ public class Player {
         player.seqno = 0;
         playerCards = new ArrayList<>();
     }
-
     public static void main(String args[]) {
         Player p = new Player();
         Scanner reader = new Scanner(System.in);
@@ -35,13 +35,12 @@ public class Player {
         p.playerMode = opt;
         p.Publish(bjp_action.joining);
         p.SubscribeDealer();
-
     }
-
     public void PlayerPrint(String x) {
         System.out.println("[Player " + this.player.uuid + " !! SeqNo: " + this.player.seqno + " !! Credits = " + this.player.credits + "] " + x);
     }
 
+    // Dealer collects info from player publisher
     public void DealerCollecting(bjDealer d) {
         PlayerPrint("Message received from Dealer with id " + d.uuid + " :");
         Scanner a = new Scanner(System.in);
@@ -64,6 +63,12 @@ public class Player {
         this.Publish(bjp_action.wagering);
     }
 
+    // checks if the sum is less than or equal to or greater than 21
+    // if sum > 21, check is ace exists
+    // if yes, count ace as 1
+    // else, player busted
+    // if sum < 21, player stays and dealer plays
+    // if sum = 21, player stays and dealer plays
     public String CheckSum(int sum, int aceExists) {
         String s = "L21";
         if (sum > 21) {
@@ -78,15 +83,15 @@ public class Player {
             if (sum > 21) {
                 s = ("Sum = " + sum + "\nBUSTED!");
                 this.Publish(bjp_action.exiting);
-
             }
         } else if (sum == 21) {
             s = ("Sum = 21!");
-
         }
         return s;
     }
 
+    // this method asks the player to either hit or stay
+    // on player choice, hit or stay and print sum
     public void PlayerModePlay(int sum) {
         if (playerMode == 1) {
             Scanner a = new Scanner(System.in);
@@ -97,7 +102,6 @@ public class Player {
             } else {
                 x = 2;
             }
-
             if (x == 1) {
                 this.Publish(bjp_action.requesting_a_card);
             } else {
@@ -106,7 +110,6 @@ public class Player {
             }
         }
     }
-
     /**
      * The PlayCards method gets the cards from the dealer and adds that card to the player's hand of cards. It then calls
      * the CheckSum function. Then the player is asked to Hit or Stay. The function then Publishes with the appropriate response.
@@ -132,6 +135,9 @@ public class Player {
         PlayerModePlay(sum);
     }
 
+    // check if player wins, print player wins and add credits to player
+    // check if dealer wins and print dealer wins
+    // check if no one wins and print no one wins
     public void PlayerWin(bjDealer d) {
         player_status m = null;
         for (player_status ps : d.players) {
@@ -150,14 +156,14 @@ public class Player {
             } else {
                 PlayerPrint("No one wins");
             }
-
         }
     }
+
+    // this is the dealers subscriber which will communicate with the players publisher
 
     /**
      * The SubscribeDealer function is the main part of the program
      */
-
     public void SubscribeDealer() {
         Runnable b = () -> {
             DDSEntityManager mgr = new DDSEntityManager();              // create a new DDS instance
@@ -174,17 +180,14 @@ public class Player {
             PlayerPrint("Player is now Subscribing to Dealer...");
             boolean terminate = false;
             while (!terminate) {                                        // We don't want the example to run indefinitely
-
                 dealerReader.take(msgSeq,                               // This reads the data that is Published by the dealer
                         infoSeq,
                         LENGTH_UNLIMITED.value,
                         ANY_SAMPLE_STATE.value, ANY_VIEW_STATE.value,
                         ANY_INSTANCE_STATE.value);
-
                 for (int i = 0; i < msgSeq.value.length; i++) {         // If multiple dealers communicate with the player,
                     // then this for loop iterates over their messages
                     bjDealer d = msgSeq.value[i];
-
                     if (d.getClass() == bjDealer.class) {               // Only read data if it's a Dealer
                         if (this.player.dealer_id == 0) {               // To set dealer_id for Player
                             if (d.action == bjd_action.collecting) {
@@ -199,7 +202,6 @@ public class Player {
                             if (d.action == bjd_action.waiting) {       // If in case the Dealer did not detect the player
                                 PlayerPrint("Dealer has already Entered!");
                             }
-
                             if (d.action == bjd_action.dealing) {       // Things to do when the Dealer is dealing
                                 PlayerPrint("Cards Recieved");
                                 this.PlayCards(d);
@@ -212,9 +214,7 @@ public class Player {
                         }
                         this.player.seqno++;
                     }
-
                 }
-
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException ie) {
@@ -222,11 +222,14 @@ public class Player {
                 }
             }
             dealerReader.return_loan(msgSeq, infoSeq);
-
             // clean up
+            // delete DataReader
             mgr.getSubscriber().delete_datareader(dealerReader);
+            // delete Subscriber
             mgr.deleteSubscriber();
+            // delete Topic
             mgr.deleteTopic();
+            // delete Participant
             mgr.deleteParticipant();
             PlayerPrint("Subscriber Closing.");
 //            main(new String[2]);
@@ -234,7 +237,7 @@ public class Player {
         Sub = new Thread(b);
         Sub.start();
     }
-
+    // this creates the players
     public void Publish(bjp_action action) {
         DDSEntityManager mgr = new DDSEntityManager();
         // create Domain Participant
@@ -252,7 +255,6 @@ public class Player {
         DataWriter dwriter = mgr.getWriter();
         bjPlayerDataWriter playerWriter = bjPlayerDataWriterHelper.narrow(dwriter);
         playerWriter.register_instance(this.player);
-
         this.player.action = action;
         if (action == bjp_action.joining) {
 //            SubscribeDealer();
@@ -268,10 +270,13 @@ public class Player {
         }
         this.player.seqno++;
         // clean up
+        // delete DataWriter
         mgr.getPublisher().delete_datawriter(playerWriter);
+        // delete Publisher
         mgr.deletePublisher();
+        // delete Topic
         mgr.deleteTopic();
+        // delete Domain Participant
         mgr.deleteParticipant();
-
     }
 }
