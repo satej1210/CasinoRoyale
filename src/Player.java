@@ -15,6 +15,7 @@ public class Player {
     private ArrayList<CR.card> playerCards;
     private Thread Sub, Pub;
     private int playerMode = 0; //1 : Mr. Conservative, 2 : Mr. I believe in Luck, 3 : Mr. Card Counter
+
     Player() {
         player = new bjPlayer();
         player.uuid = UUIDGen.generate_UUID();
@@ -153,82 +154,67 @@ public class Player {
         }
     }
 
+    /**
+     * The SubscribeDealer function is the main part of the program
+     */
+
     public void SubscribeDealer() {
         Runnable b = () -> {
-            DDSEntityManager mgr = new DDSEntityManager();
-
-            // create Domain Participant
-            mgr.createParticipant("CR");
-
-            // create Type
-            bjDealerTypeSupport msgTS = new bjDealerTypeSupport();
-            mgr.registerType(msgTS);
-
-            // create Topic
-            mgr.createTopic("Dealer");
-
-            // create Subscriber
-            mgr.createSubscriber();
-
-            // create DataReader
-            mgr.createReader();
-
-            // Read Events
-
-            DataReader dreader = mgr.getReader();
+            DDSEntityManager mgr = new DDSEntityManager();              // create a new DDS instance
+            mgr.createParticipant("CR");                                // create Domain Participant
+            bjDealerTypeSupport msgTS = new bjDealerTypeSupport();      // create Type for Dealer
+            mgr.registerType(msgTS);                                    // Register Dealer
+            mgr.createTopic("Dealer");                                  // create Topic
+            mgr.createSubscriber();                                     // create Subscriber
+            mgr.createReader();                                         // create DataReader
+            DataReader dreader = mgr.getReader();                       // Read Events
             bjDealerDataReader dealerReader = bjDealerDataReaderHelper.narrow(dreader);
-
             bjDealerSeqHolder msgSeq = new bjDealerSeqHolder();
             SampleInfoSeqHolder infoSeq = new SampleInfoSeqHolder();
-
-            PlayerPrint("Dealer Subscriber Ready...");
+            PlayerPrint("Player is now Subscribing to Dealer...");
             boolean terminate = false;
-            int count = 0;
+            while (!terminate) {                                        // We don't want the example to run indefinitely
 
-            while (!terminate) { // We dont want the example to run indefinitely
-                dealerReader.take(msgSeq, infoSeq, LENGTH_UNLIMITED.value,
+                dealerReader.take(msgSeq,                               // This reads the data that is Published by the dealer
+                        infoSeq,
+                        LENGTH_UNLIMITED.value,
                         ANY_SAMPLE_STATE.value, ANY_VIEW_STATE.value,
                         ANY_INSTANCE_STATE.value);
 
-                {
-                    for (int i = 0; i < msgSeq.value.length; i++) {
-                        bjDealer d = msgSeq.value[i];
-                        if (d.getClass() == bjDealer.class) {
-                            if (this.player.dealer_id == 0) {
-                                if (d.action == bjd_action.collecting) {
-                                    PlayerPrint("Dealer has accepted and is collecting!");
-                                    this.player.dealer_id = d.uuid;
-                                    this.DealerCollecting(d);
-                                    //this.player.action = bjp_action.requesting_a_card;
-                                    this.player.seqno++;
-                                    continue;
-                                }
+                for (int i = 0; i < msgSeq.value.length; i++) {         // If multiple dealers communicate with the player,
+                    // then this for loop iterates over their messages
+                    bjDealer d = msgSeq.value[i];
+
+                    if (d.getClass() == bjDealer.class) {               // Only read data if it's a Dealer
+                        if (this.player.dealer_id == 0) {               // To set dealer_id for Player
+                            if (d.action == bjd_action.collecting) {
+                                PlayerPrint("Dealer has accepted and is collecting!");
+                                this.player.dealer_id = d.uuid;
+                                this.DealerCollecting(d);
+                                this.player.seqno++;
+                                continue;
                             }
-                            if (d.target_uuid == this.player.uuid) {
-                                if (d.action == bjd_action.waiting) {
-                                    PlayerPrint("Dealer has already Entered!");
-                                    //this.player.dealer_id = d.uuid;
-                                    //this.Publish(bjp_action.joining);
-                                }
-
-                                if (d.action == bjd_action.dealing) {
-                                    PlayerPrint("Cards Recieved");
-                                    this.PlayCards(d);
-                                }
-                                if (d.action == bjd_action.paying) {
-
-
-                                    this.PlayerWin(d);
-                                    terminate = true;
-                                    gameRunning = false;
-                                }
-                            }
-                            this.player.seqno++;
                         }
+                        if (d.target_uuid == this.player.uuid) {        // This is when the Dealer wants to communicate with this player
+                            if (d.action == bjd_action.waiting) {       // If in case the Dealer did not detect the player
+                                PlayerPrint("Dealer has already Entered!");
+                            }
 
+                            if (d.action == bjd_action.dealing) {       // Things to do when the Dealer is dealing
+                                PlayerPrint("Cards Recieved");
+                                this.PlayCards(d);
+                            }
+                            if (d.action == bjd_action.paying) {        // Things to do when the Dealer is paying player
+                                this.PlayerWin(d);
+                                terminate = true;
+                                gameRunning = false;
+                            }
+                        }
+                        this.player.seqno++;
                     }
 
                 }
+
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException ie) {
