@@ -88,27 +88,17 @@ public class Dealer {
         this.Subscribe();
     }
 
+    /* In the method Publish, the Dealer Publishes its action to the target player.
+         */
     public void Publish(bjd_action a) {
         DDSEntityManager mgr = new DDSEntityManager();
-
-
         mgr.createParticipant("CR"); // create Domain Participant
-
-        // create Type
-        bjDealerTypeSupport msgTS = new bjDealerTypeSupport();
+        bjDealerTypeSupport msgTS = new bjDealerTypeSupport();// create Type
         mgr.registerType(msgTS);
-
-        // create Topic
-        mgr.createTopic("Dealer");
-
-        // create Publisher
-        mgr.createPublisher();
-
-        // create DataWriter
-        mgr.createWriter();
-
-        // Publish Events
-        DataWriter dwriter = mgr.getWriter();
+        mgr.createTopic("Dealer");// create Topic
+        mgr.createPublisher(); // create Publisher
+        mgr.createWriter();// create DataWriter
+        DataWriter dwriter = mgr.getWriter();// Publish Events
         bjDealerDataWriter dealerWriter = bjDealerDataWriterHelper.narrow(dwriter);
         bjDealer d = this.dealer;
         d.action = a;
@@ -133,7 +123,7 @@ public class Dealer {
         mgr.deleteParticipant();
     }
 
-    /* In the method DealToSelf, the Dealer deals cards to himself or herself. The function
+    /* In the method DealToSelf, the Dealer deals cards to itself. The function
      * then calculates and prints the total sum of the Dealer's cards by running a for loop through the
      * Dealer's cards and calling the DealerPrint function to print the sum. The function then calls the Wait 
      * function to pause the game for 5000 milliseconds.
@@ -157,7 +147,10 @@ public class Dealer {
         Wait(5000);
     }
 
-    
+    /* In the method DealCards, the Dealer deals cards to the player. Due to the lack of understanding of the dealer.cards
+     * array, we send one card at a time to the player who then stores it in an ArrayList. The Dealer also stores a backup
+     * of this array. The function then calls the Wait function to pause the game for 5000 milliseconds.
+     */
     public void DealCards(bjPlayer p) {
         DealerPrint("Dealing Cards ");
         PlayerCards l = null;
