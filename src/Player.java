@@ -158,11 +158,10 @@ public class Player {
             }
         }
     }
-
-    /* this is the dealers subscriber which will communicate with the players publisher */
-
+    
     /**
      * The SubscribeDealer function is the main part of the program
+     * this is the dealers subscriber which will communicate with the players publisher
      */
     public void SubscribeDealer() {
         Runnable b = () -> {

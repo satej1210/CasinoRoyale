@@ -5,15 +5,8 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98df0f42-e8ec-48c6-9c5b-a9b7155918c4" name="Default" comment="comments added">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CR/Dealer.class" afterPath="$PROJECT_DIR$/out/production/CR/Dealer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CR/Player.class" afterPath="$PROJECT_DIR$/out/production/CR/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CR/UUIDGen.class" afterPath="$PROJECT_DIR$/out/production/CR/UUIDGen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CR/diagram.png" afterPath="$PROJECT_DIR$/out/production/CR/diagram.png" />
+    <list default="true" id="98df0f42-e8ec-48c6-9c5b-a9b7155918c4" name="Default" comment="adhish comments added">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/desktop.ini" afterPath="$PROJECT_DIR$/bin/desktop.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ospl-error.log" afterPath="$PROJECT_DIR$/ospl-error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ospl-info.log" afterPath="$PROJECT_DIR$/ospl-info.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.java" afterPath="$PROJECT_DIR$/src/Player.java" />
     </list>
     <ignored path="CR.iws" />
@@ -74,10 +67,10 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-826">
-              <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+            <state relative-caret-position="551">
+              <caret line="160" column="4" selection-start-line="160" selection-start-column="4" selection-end-line="160" selection-end-column="4" />
               <folding>
-                <element signature="e#0#11356#0" expanded="true" />
+                <element signature="e#0#11322#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -87,11 +80,9 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9594">
-              <caret line="1546" column="105" selection-start-line="1546" selection-start-column="105" selection-end-line="1546" selection-end-column="105" />
-              <folding>
-                <marker date="1481171779805" expanded="true" signature="360:437" ph="..." />
-              </folding>
+            <state relative-caret-position="261">
+              <caret line="997" column="105" selection-start-line="997" selection-start-column="105" selection-end-line="997" selection-end-column="105" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -109,11 +100,11 @@
       <file leaf-file-name="Dealer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Dealer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+            <state relative-caret-position="340">
+              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
               <folding>
-                <element signature="e#1429#1430#0" expanded="true" />
-                <element signature="e#1455#1456#0" expanded="true" />
+                <element signature="e#1390#1391#0" expanded="true" />
+                <element signature="e#1416#1417#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -247,6 +238,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="adhish9 &lt;adhish.deshpande@gmail.com&gt;" />
         <option value="satej1210 &lt;satej1210@live.com&gt;" />
         <option value="satej1210 &lt;satej1210@live.com&gt;]" />
       </list>
@@ -1071,7 +1063,7 @@
       <workItem from="1481008189927" duration="10424000" />
       <workItem from="1481057865194" duration="298000" />
       <workItem from="1481058222676" duration="3943000" />
-      <workItem from="1481128147857" duration="5957000" />
+      <workItem from="1481128147857" duration="6380000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Dealer&#10;Made Table class&#10;">
       <created>1479155099763</created>
@@ -1178,7 +1170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481166028941</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="adhish comments added">
+      <created>1481171914281</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1481171914281</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1214,7 +1213,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129101000" />
+    <option name="totallyTimeSpent" value="129524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1304,7 +1303,8 @@
     <MESSAGE value="kinda final but incomplete" />
     <MESSAGE value="comments" />
     <MESSAGE value="comments added" />
-    <option name="LAST_COMMIT_MESSAGE" value="comments added" />
+    <MESSAGE value="adhish comments added" />
+    <option name="LAST_COMMIT_MESSAGE" value="adhish comments added" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1643,11 +1643,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9594">
-          <caret line="1546" column="105" selection-start-line="1546" selection-start-column="105" selection-end-line="1546" selection-end-column="105" />
-          <folding>
-            <marker date="1481171779805" expanded="true" signature="360:437" ph="..." />
-          </folding>
+        <state relative-caret-position="261">
+          <caret line="997" column="105" selection-start-line="997" selection-start-column="105" selection-end-line="997" selection-end-column="105" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1762,17 +1760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dealer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-          <folding>
-            <element signature="e#1429#1430#0" expanded="true" />
-            <element signature="e#1455#1456#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Dealer (Asus-PC's conflicted copy 2016-12-07).java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-629">
@@ -1781,12 +1768,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dealer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding>
+            <element signature="e#1390#1391#0" expanded="true" />
+            <element signature="e#1416#1417#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-826">
-          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+        <state relative-caret-position="551">
+          <caret line="160" column="4" selection-start-line="160" selection-start-column="4" selection-end-line="160" selection-end-column="4" />
           <folding>
-            <element signature="e#0#11356#0" expanded="true" />
+            <element signature="e#0#11322#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
